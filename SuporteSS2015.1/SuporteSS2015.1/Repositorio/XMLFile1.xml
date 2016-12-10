@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<implemente>
+  1 - Entra com o usario para criar o banco de dados
+  2 - Só acessa as paginas se o usarios estiver logado
+  3 - Criar as tabelas no banco de dados
+    3.1 - Tabelas postagem e topicos
+    3.2 - as tabelas login e usarios já vam ser pegues do banco de dados que a aplicação vai criar
+  4 - Criar a agenda
+  5 - parecer o nome do usario logado
+  6 - mostra o botao sair - obs se quando a aplicação for iniciada no vs 2015 esse bota já aparece.
+</implemente>

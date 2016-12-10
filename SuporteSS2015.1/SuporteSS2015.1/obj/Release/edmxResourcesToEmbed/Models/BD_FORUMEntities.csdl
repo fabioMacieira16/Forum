@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_FORUMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="postagem">
+    <Key>
+      <PropertyRef Name="id_postagem" />
+    </Key>
+    <Property Name="id_postagem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_topico_forum" Type="Int32" Nullable="false" />
+    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="mensagem" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="data_publicacao" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="topico_forum" Relationship="Self.FK__postagem__id_top__08EA5793" FromRole="postagem" ToRole="topico_forum" />
+    <NavigationProperty Name="usuario" Relationship="Self.FK__postagem__id_usu__09DE7BCC" FromRole="postagem" ToRole="usuario" />
+  </EntityType>
+  <EntityType Name="topico_forum">
+    <Key>
+      <PropertyRef Name="id_topico_forum" />
+    </Key>
+    <Property Name="id_topico_forum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="data_cadastro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="postagem" Relationship="Self.FK__postagem__id_top__08EA5793" FromRole="topico_forum" ToRole="postagem" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="login_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adm" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="data_cadastro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="postagem" Relationship="Self.FK__postagem__id_usu__09DE7BCC" FromRole="usuario" ToRole="postagem" />
+  </EntityType>
+  <Association Name="FK__postagem__id_top__08EA5793">
+    <End Role="topico_forum" Type="Self.topico_forum" Multiplicity="1" />
+    <End Role="postagem" Type="Self.postagem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="topico_forum">
+        <PropertyRef Name="id_topico_forum" />
+      </Principal>
+      <Dependent Role="postagem">
+        <PropertyRef Name="id_topico_forum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__postagem__id_usu__09DE7BCC">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+    <End Role="postagem" Type="Self.postagem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="postagem">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_FORUMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="postagem" EntityType="Self.postagem" />
+    <EntitySet Name="topico_forum" EntityType="Self.topico_forum" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" />
+    <AssociationSet Name="FK__postagem__id_top__08EA5793" Association="Self.FK__postagem__id_top__08EA5793">
+      <End Role="topico_forum" EntitySet="topico_forum" />
+      <End Role="postagem" EntitySet="postagem" />
+    </AssociationSet>
+    <AssociationSet Name="FK__postagem__id_usu__09DE7BCC" Association="Self.FK__postagem__id_usu__09DE7BCC">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="postagem" EntitySet="postagem" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

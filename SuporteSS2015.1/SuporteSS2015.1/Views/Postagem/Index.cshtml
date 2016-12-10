@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SuporteSS2015._1.Models.postagem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="form-group">
+    @Html.ActionLink("Publicar Mensagem", "Create", null, null, new { @class = "btn btn-primary" })
+</div>
+
+<div class="panel panel-default">
+   @* <div class="panel-heading"><h3><b>Publicação para o topico: @ViewBag.nomeTopico<span class="badge">@Model.Count()</span></b></h3></div>*@
+    <div class="panel-body">
+        @*@foreach (var item in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <b>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        @Html.DisplayFor(modelItem => item.usuario.nome) publicado em
+                        @Html.DisplayFor(modelItem => item.data_publicacao)
+                    </b>
+                </div>
+                <div class="panel-body">
+                    <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                    @Html.DisplayFor(modelItem => item.mensagem)
+                </div>
+            </div>
+        }*@
+    </div>
+</div>

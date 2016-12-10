@@ -1,0 +1,34 @@
+﻿@model SuporteSS2015._1.Models.postagem
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Publicar Mensagem</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label for="topico" class="control-label col-md-2">Tópico</label>
+            <div class="col-md-10">
+                @*@Html.DropDownList("id_topico_forum", null, htmlAttributes: new { @object = "form-control" })*@
+                @Html.ValidationMessageFor(model => model.id_topico_forum, "", new { @class = "text_danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="mensagem" class="control-label col-md-2">Mensagem</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.mensagem, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10"></div>
+            <input type="submit" value="Publicar" class="btn btn-primary" />
+        </div>
+    </div>
+}
