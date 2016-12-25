@@ -1,31 +1,38 @@
-﻿@model IEnumerable<SuporteSS2015._1.Models.postagem>
+﻿@model IEnumerable<SuporteSS2015._1.Models.Postagem>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <br />
 <div class="form-group">
     @Html.ActionLink("Publicar Mensagem", "Create", null, null, new { @class = "btn btn-primary" })
+
 </div>
 
 <div class="panel panel-default">
-   @* <div class="panel-heading"><h3><b>Publicação para o topico: @ViewBag.nomeTopico<span class="badge">@Model.Count()</span></b></h3></div>*@
+    <div class="panel-heading"><h3><b>Publicações para o tópico: @ViewBag.nomeTopico<span class="badge">@Model.Count()</span></b></h3></div>
     <div class="panel-body">
-        @*@foreach (var item in Model)
+        @foreach (var item in Model)
         {
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <b>
                         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                        @Html.DisplayFor(modelItem => item.usuario.nome) publicado em
-                        @Html.DisplayFor(modelItem => item.data_publicacao)
+                        @*@Html.DisplayFor(modelItem => item.usuario.nome)*@
+                        @Html.DisplayFor(modelItem => item.Topico) -
+                        Publicado em: @Html.DisplayFor(modelItem => item.DataPostagem)
                     </b>
                 </div>
                 <div class="panel-body">
                     <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
-                    @Html.DisplayFor(modelItem => item.mensagem)
+                    @Html.Raw(item.Mensagem)
+                    <span class="badge">@item.Resposta.Count</span>
+                    @Html.ActionLink("Respostas", "Create", "Respostas", new { topico = item.Topico }, null)
                 </div>
             </div>
-        }*@
+        }
     </div>
 </div>
+

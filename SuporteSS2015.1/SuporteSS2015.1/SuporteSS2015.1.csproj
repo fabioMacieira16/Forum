@@ -162,44 +162,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnalistasController.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\EscalasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostagemController.cs" />
-    <Compile Include="Controllers\TopicoController.cs" />
+    <Compile Include="Controllers\RespostasController.cs" />
+    <Compile Include="Controllers\TipoEscalaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\BD_FORUMEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BD_FORUMEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BD_FORUMEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BD_FORUMEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BD_FORUMEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BD_FORUMEntities.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Analistas.cs" />
+    <Compile Include="Models\Escala.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\postagem.cs">
-      <DependentUpon>BD_FORUMEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\topico_forum.cs">
-      <DependentUpon>BD_FORUMEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\usuario.cs">
-      <DependentUpon>BD_FORUMEntities.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Postagem.cs" />
+    <Compile Include="Models\Resposta.cs" />
+    <Compile Include="Models\TipoEscala.cs" />
+    <Compile Include="Models\Categorias.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\summernote.css" />
     <Content Include="Img\download.jpg" />
     <Content Include="Img\contato.png" />
     <Content Include="Img\forum.jpg" />
@@ -213,26 +201,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Repositorio\XMLFile1.xml" />
+    <Content Include="Repositorio\XMLFile1.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\BD_FORUMEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BD_FORUMEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BD_FORUMEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BD_FORUMEntities.edmx</DependentUpon>
-      <LastGenOutput>BD_FORUMEntities.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BD_FORUMEntities.edmx.diagram">
-      <DependentUpon>BD_FORUMEntities.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\BD_FORUMEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BD_FORUMEntities.edmx</DependentUpon>
-      <LastGenOutput>BD_FORUMEntities.cs</LastGenOutput>
-    </Content>
+    <Content Include="fonts\summernote.eot" />
+    <Content Include="fonts\summernote.ttf" />
+    <Content Include="fonts\summernote.woff" />
     <None Include="Properties\PublishProfiles\ForumSS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -245,6 +221,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\summernote.js" />
+    <Content Include="Scripts\summernote.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -258,7 +236,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Download.cshtml" />
-    <Content Include="Views\Home\Agenda.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -282,10 +259,34 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Versoes.cshtml" />
+    <Content Include="Views\Analistas\Index.cshtml" />
+    <Content Include="Views\Analistas\Create.cshtml" />
+    <Content Include="Views\Analistas\Edit.cshtml" />
+    <Content Include="Views\Analistas\Delete.cshtml" />
+    <Content Include="Views\TipoEscala\Create.cshtml" />
+    <Content Include="Views\TipoEscala\Delete.cshtml" />
+    <Content Include="Views\TipoEscala\Edit.cshtml" />
+    <Content Include="Views\TipoEscala\Index.cshtml" />
+    <Content Include="Views\Escalas\Create.cshtml" />
+    <Content Include="Views\Escalas\Delete.cshtml" />
+    <Content Include="Views\Escalas\Edit.cshtml" />
+    <Content Include="Views\Escalas\Index.cshtml" />
+    <Content Include="Views\Escalas\Details.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Postagem\Createteste.cshtml" />
+    <Content Include="Views\Postagem\Delete.cshtml" />
+    <Content Include="Views\Postagem\Details.cshtml" />
+    <Content Include="Views\Postagem\Edit.cshtml" />
     <Content Include="Views\Postagem\Index.cshtml" />
+    <Content Include="Views\Respostas\Create.cshtml" />
+    <Content Include="Views\Respostas\Delete.cshtml" />
+    <Content Include="Views\Respostas\Details.cshtml" />
+    <Content Include="Views\Respostas\Edit.cshtml" />
+    <Content Include="Views\Respostas\Index.cshtml" />
     <Content Include="Views\Postagem\Create.cshtml" />
-    <Content Include="Views\Topico\Index.cshtml" />
-    <Content Include="Views\Topico\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

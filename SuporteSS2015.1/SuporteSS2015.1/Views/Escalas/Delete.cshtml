@@ -1,0 +1,49 @@
+﻿@model SuporteSS2015._1.Models.Escala
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Escala</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Analistas.NomeAnalista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Analistas.NomeAnalista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEscala.TipoEscalas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEscala.TipoEscalas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDoPlantao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDoPlantao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
