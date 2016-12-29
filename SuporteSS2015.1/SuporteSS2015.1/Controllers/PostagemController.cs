@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SuporteSS2015._1.Models;
@@ -9,49 +12,125 @@ namespace SuporteSS2015._1.Controllers
 {
     public class PostagemController : Controller
     {
-        private BD_FORUMEntities db = new BD_FORUMEntities();
-        // GET: /Postagem/
+        private ApplicationDbContext db = new ApplicationDbContext();
 
-        public ActionResult Index(int? id_topico_forum)
+        // GET: Postagem
+        public ActionResult Index()
         {
-            ////var nomeTopico = db.topico_forum.Find(id_topico_forum);
-            ////var postagem = db.postagem.Where(p => p.topico_forum.id_topico_forum == id_topico_forum).Include(p => p.topico_forum).Include(p => p.usuario);
-            ////ViewBag.nomeTopico = nomeTopico.nome;
-            ////return View(postagem.ToList());
-            return View();
+            //var nomeTopico = db.Categorias.Find(Id);
+            var postagem = db.Postagem.Include(p => p.Categoria);
+
+            //ViewBag.nomeTopico = nomeTopico.Categoria;
+            return View(postagem.ToList());
         }
-        //GET: Postagem/Create
+
+        // GET: Postagem/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Postagem postagem = db.Postagem.Find(id);
+            if (postagem == null)
+            {
+                return HttpNotFound();
+            }
+            return View(postagem);
+        }
+
+        // GET: Postagem/Create
         public ActionResult Create()
         {
-            ViewBag.id_topico_forum = new SelectList(db.topico_forum, "id_topico_forum", "nome");
-            ViewBag.id_usario = new SelectList(db.usuario, "id_usuario", "nome");
+            ViewBag.CategoriaId = new SelectList(db.Categorias, "Id", "Categoria");
             return View();
         }
 
-        //Post: Postagem/Create
+        // POST: Postagem/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult Create([Bind(Include = "Id,Topico,Mensagem,DataPostagem,CategoriaId")] Postagem postagem)
+        {
+            postagem.DataPostagem = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                db.Postagem.Add(postagem);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.CategoriaId = new SelectList(db.Categorias, "Id", "Categoria", postagem.CategoriaId);
+            return View(postagem);
+        }
+
+        // GET: Postagem/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Postagem postagem = db.Postagem.Find(id);
+            if (postagem == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.CategoriaId = new SelectList(db.Categorias, "Id", "Categoria", postagem.CategoriaId);
+            return View(postagem);
+        }
+
+        // POST: Postagem/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "id_postage, id_topico_forum_id_usuario,id_resposta, mensagem, data_publicacao")] postagem postagem)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        // usarioLogado = AutenticarUsuario.retornaUsuarioDaSessao();
+        public ActionResult Edit([Bind(Include = "Id,Topico,Mensagem,DataPostagem,CategoriaId")] Postagem postagem)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(postagem).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.CategoriaId = new SelectList(db.Categorias, "Id", "Categoria", postagem.CategoriaId);
+            return View(postagem);
+        }
 
-        //        postagem.id_usuario = usarioLogado.id_usuario;
-        //        postagem.data_publicacao = DateTime.Now;
+        // GET: Postagem/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Postagem postagem = db.Postagem.Find(id);
+            if (postagem == null)
+            {
+                return HttpNotFound();
+            }
+            return View(postagem);
+        }
 
-        //        db.postagem.Add(postagem);
-        //        db.SaveChanges();
+        // POST: Postagem/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Postagem postagem = db.Postagem.Find(id);
+            db.Postagem.Remove(postagem);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
-        //        return RedirectToAction("Index", new { id_topico_forum = postagem.id_topico_forum });
-        //    }
-
-        //    ViewBag.id_topico_forum = new SelectList(db.topico_forum, "id_topico_forum", "nome", postagem.id_topico_forum);
-        //    ViewBag.id_usuario = new SelectList(db.usuario, "id_usuario", "nome", postagem.id_usuario);
-        //    return View(postagem);
-        //}
         protected override void Dispose(bool disposing)
         {
+            if (disposing)
+            {
+                db.Dispose();
+            }
             base.Dispose(disposing);
         }
     }

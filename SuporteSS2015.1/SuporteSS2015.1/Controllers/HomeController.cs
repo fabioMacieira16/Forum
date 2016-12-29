@@ -12,28 +12,25 @@ namespace SuporteSS2015._1.Controllers
         {
             return View();
         }
-        [Authorize]
+        //[Authorize]
         public ActionResult Download()
         {
             ViewBag.Message = "Baixe programas e drives de impressoras.";
             return View();
         }
-        [Authorize]
+        //[Authorize]
         public ActionResult Versoes()
         {
             return View();
         }
-
         public ActionResult Forum()
         {
-            return Redirect("/Topico/Index");
+            return Redirect("/Postagem/Index");
         }
-        //[Authorize]
-        public ActionResult Agenda()
+        public ActionResult Agenda() 
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return Redirect("/Escalas/Details");
         }
+
     }
 }

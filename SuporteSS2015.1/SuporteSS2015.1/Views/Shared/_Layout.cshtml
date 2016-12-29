@@ -7,6 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/BootStrap")
+    @RenderSection("css", required: false)
 
 </head>
 <body>
@@ -25,7 +26,8 @@
                     <li>@Html.ActionLink("Download", "Download", "Home")
                     <li>@Html.ActionLink("Versões", "Versoes", "Home")</li>
                     <li>@Html.ActionLink("Forum", "Forum", "Home")</li>
-                    <li>@Html.ActionLink("Agenda", "Agenda", "Home")</li>
+                    <li>@Html.ActionLink("Escalas", "Agenda", "Home")</li>
+                    <li>@Html.ActionLink("Categorias", "Index", "Categorias")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
