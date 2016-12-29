@@ -6,8 +6,16 @@
     <title>@ViewBag.Title - Suporte</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Styles.Render("~/Content/BootStrap")
+    @*@Styles.Render("~/Content/BootStrap")*@
+    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Content/css.css" rel="stylesheet" />
+    <link href="~/Content/style-responsive.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
     @RenderSection("css", required: false)
+
+
+
+
 
 </head>
 <body>
@@ -43,6 +51,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/jquery-migrate-1.0.0.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

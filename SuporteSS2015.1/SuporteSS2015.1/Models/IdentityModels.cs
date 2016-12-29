@@ -23,7 +23,7 @@ namespace SuporteSS2015._1.Models
         public ApplicationDbContext()
             : base("SuporteSS", throwIfV1Schema: false)
         {
-          //Database.SetInitializer(new DropCreateDatabaseAlways<ApplicationDbContext>());
+          Database.SetInitializer(new DropCreateDatabaseAlways<ApplicationDbContext>());
         }
        
         public virtual DbSet<Usuario> Usuario { get; set; }
@@ -33,11 +33,13 @@ namespace SuporteSS2015._1.Models
         public virtual DbSet<Postagem> Postagem { get; set; }
         public virtual DbSet<Resposta> Resposta { get; set; }
         public virtual DbSet<Escala> Escalas { get; set; }
-     
+        public virtual DbSet<Produto> Produto { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+
 
     }
 }

@@ -168,6 +168,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostagemController.cs" />
+    <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\RespostasController.cs" />
     <Compile Include="Controllers\TipoEscalaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -179,6 +180,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Postagem.cs" />
+    <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Resposta.cs" />
     <Compile Include="Models\TipoEscala.cs" />
     <Compile Include="Models\Categorias.cs" />
@@ -187,20 +189,26 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\css.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\style-responsive.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\summernote.css" />
-    <Content Include="Img\download.jpg" />
-    <Content Include="Img\contato.png" />
-    <Content Include="Img\forum.jpg" />
-    <Content Include="Img\download_programas.jpg" />
-    <Content Include="Img\icon.png" />
-    <Content Include="Img\sped.jpg" />
-    <Content Include="Img\usuario.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Img\contato.png" />
+    <Content Include="Img\download.jpg" />
+    <Content Include="Img\download_programas.jpg" />
+    <Content Include="Img\forum.jpg" />
+    <Content Include="Img\icon.png" />
+    <Content Include="Img\sped.jpg" />
+    <Content Include="Img\usuario.jpg" />
     <Content Include="Repositorio\XMLFile1.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -214,6 +222,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-migrate-1.0.0.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -287,6 +296,11 @@
     <Content Include="Views\Respostas\Edit.cshtml" />
     <Content Include="Views\Respostas\Index.cshtml" />
     <Content Include="Views\Postagem\Create.cshtml" />
+    <Content Include="Views\Produtos\Create.cshtml" />
+    <Content Include="Views\Produtos\Delete.cshtml" />
+    <Content Include="Views\Produtos\Details.cshtml" />
+    <Content Include="Views\Produtos\Edit.cshtml" />
+    <Content Include="Views\Produtos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
