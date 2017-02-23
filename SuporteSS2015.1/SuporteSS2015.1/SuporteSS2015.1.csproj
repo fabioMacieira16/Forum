@@ -168,7 +168,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostagemController.cs" />
-    <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\RespostasController.cs" />
     <Compile Include="Controllers\TipoEscalaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -180,7 +179,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Postagem.cs" />
-    <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Resposta.cs" />
     <Compile Include="Models\TipoEscala.cs" />
     <Compile Include="Models\Categorias.cs" />
@@ -296,11 +294,6 @@
     <Content Include="Views\Respostas\Edit.cshtml" />
     <Content Include="Views\Respostas\Index.cshtml" />
     <Content Include="Views\Postagem\Create.cshtml" />
-    <Content Include="Views\Produtos\Create.cshtml" />
-    <Content Include="Views\Produtos\Delete.cshtml" />
-    <Content Include="Views\Produtos\Details.cshtml" />
-    <Content Include="Views\Produtos\Edit.cshtml" />
-    <Content Include="Views\Produtos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

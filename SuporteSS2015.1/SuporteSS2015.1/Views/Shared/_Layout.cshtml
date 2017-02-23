@@ -13,10 +13,6 @@
     <link href="~/Content/style.css" rel="stylesheet" />
     @RenderSection("css", required: false)
 
-
-
-
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -31,9 +27,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Fórum", "Forum", "Home")</li>
                     <li>@Html.ActionLink("Download", "Download", "Home")
                     <li>@Html.ActionLink("Versões", "Versoes", "Home")</li>
-                    <li>@Html.ActionLink("Forum", "Forum", "Home")</li>
                     <li>@Html.ActionLink("Escalas", "Agenda", "Home")</li>
                     <li>@Html.ActionLink("Categorias", "Index", "Categorias")</li>
                 </ul>

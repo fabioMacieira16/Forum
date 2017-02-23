@@ -11,6 +11,5 @@ namespace SuporteSS2015._1.Models
         public string Categoria { get; set; }
         public virtual ICollection<Postagem> Postagem { get; set; }
 
-        public virtual ICollection<Produto> Produto { get; set; }
     }
 }

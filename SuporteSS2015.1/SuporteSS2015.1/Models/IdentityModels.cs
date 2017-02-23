@@ -25,21 +25,15 @@ namespace SuporteSS2015._1.Models
         {
           Database.SetInitializer(new DropCreateDatabaseAlways<ApplicationDbContext>());
         }
-       
-        public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Analistas> Analistas { get; set; }
         public virtual DbSet<TipoEscala> TipoEscala { get; set; }
         public virtual DbSet<Categorias> Categorias { get; set; }
         public virtual DbSet<Postagem> Postagem { get; set; }
         public virtual DbSet<Resposta> Resposta { get; set; }
         public virtual DbSet<Escala> Escalas { get; set; }
-        public virtual DbSet<Produto> Produto { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-
-
-
     }
 }
