@@ -4,8 +4,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
 <div class="row-fluid">
 
         <div class="span3 statbox purple" ontablet="span6" ondesktop="span3">
@@ -66,7 +64,7 @@
                     <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
                     @Html.Raw(item.Mensagem)
                     <span class="badge">@item.Resposta.Count</span>
-                    @Html.ActionLink("Respostas", "Create", "Respostas", new { topico = item.Topico }, null)
+                    @Html.ActionLink("Respostas", "Index", "Respostas", new { topico = item.Topico }, null)
                 </div>
             </div>
         }

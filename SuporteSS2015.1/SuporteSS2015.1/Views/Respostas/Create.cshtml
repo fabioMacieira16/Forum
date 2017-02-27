@@ -2,14 +2,15 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = null; //"~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
-<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+@*<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>*@
 
 <script type="text/javascript">
 
@@ -42,7 +43,7 @@
             @Html.LabelFor(model => model.Respostas, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @*@Html.EditorFor(model => model.Mensagem, new { htmlAttributes = new { @class = "form-control" } })*@
-                <textarea id="Resposta" name="Resposta"><p>Sua Resposta</p></textarea>
+                <textarea id="Resposta" name="Respostas"><p>Sua Resposta</p></textarea>
                 @Html.ValidationMessageFor(model => model.Respostas, "", new { @class = "text-danger" })
             </div>
         </div>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SuporteSS2015._1.Models.Resposta>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                
+            </div>
+            <div class="panel-body">
+                <span class="badge">@item.Postagem.Resposta.Count</span>
+                @Html.ActionLink("Respostas", "Create", "Respostas", new { topico = item.Postagem.Topico }, null)
+            </div>
+        </div>
+    }
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Postagem.Topico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Respostas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataResposta)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Postagem.Topico)
+        </td>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @Html.DisplayFor(modelItem => item.Respostas)
+
+            </div>
+            </div>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.DataResposta)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+</tr>
+}
+
+</table>
