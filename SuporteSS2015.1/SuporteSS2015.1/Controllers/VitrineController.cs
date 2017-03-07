@@ -16,13 +16,13 @@ namespace SuporteSS2015._1.Controllers
         // GET: /Vitrine/
         public ViewResult ListaPostagem(string categoria, int pagina = 1)
         {
-            _postagem = new Postagem();
-            Postagem model = new Postagem
-            {
-                Postagems = _postagem.Categoria
-                .Where(pagina => categoria = null || p.Categoria == categoria)
-            }
-        };
+        //    _postagem = new Postagem();
+        //    Postagem model = new Postagem
+        //    {
+        //        Postagems = _postagem.Categoria
+        //            .Where(pagina => categoria = null || p.Categoria == categoria)
+        //    };
+      
             return View();
         }
     }

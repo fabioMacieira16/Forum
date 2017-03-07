@@ -12,7 +12,12 @@
     <link href="~/Content/style-responsive.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
 
+
+
     @RenderSection("css", required: false)
+
+
+
 
 </head>
 <body>
@@ -48,7 +53,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <script src="~/Scripts/jquery-migrate-1.0.0.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
