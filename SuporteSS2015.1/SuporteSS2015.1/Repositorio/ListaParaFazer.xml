@@ -31,12 +31,12 @@
              $ok 1 Categoria
             
             3 Tala inicial do forum
-              1 destaques dos forum(os 5 ultimos post) 
+              1 destaques dos forum(os 10 ultimos post) 
                 logo abaixo
-                2 ultimos 10 posts
-                3 lista a quantidade de paginas para usuário
+                $ok 2 ultimos 10 posts -(usando o tack(10)
+                 3  lista a quantidade de paginas para usuário
                 4 fazer um filtro de busca
-                $ok 5 todo post vai ter um link para abrir na sua aba
+                5 todo post vai ter um link para abrir na sua aba
                 6 da mesma forma vai ser no buscar
                 7 responder a pergunta na mesma pagina
                 
@@ -69,7 +69,7 @@
             </Agenda>
 --------------------------------------------------------------------------------------------------------
   <Informações>
-    criar o local para que o usuario possa mandar sujestoes e melhorias para o forum em sí
+    criar o local para que o usuario possa mandar sugestões e melhorias para o forum em sí
       Nome da pessoa
       assunto
       contato

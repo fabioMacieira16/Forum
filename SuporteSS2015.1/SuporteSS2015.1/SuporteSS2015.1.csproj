@@ -170,14 +170,18 @@
     <Compile Include="Controllers\PostagemController.cs" />
     <Compile Include="Controllers\RespostasController.cs" />
     <Compile Include="Controllers\TipoEscalaController.cs" />
+    <Compile Include="Controllers\VitrineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Analistas.cs" />
     <Compile Include="Models\Escala.cs" />
+    <Compile Include="HtmlHelps\PaginacaoHelps.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Paginacao.cs" />
+    <Compile Include="Models\PaginaViewModel.cs" />
     <Compile Include="Models\Postagem.cs" />
     <Compile Include="Models\Resposta.cs" />
     <Compile Include="Models\TipoEscala.cs" />
@@ -207,7 +211,7 @@
     <Content Include="Img\icon.png" />
     <Content Include="Img\sped.jpg" />
     <Content Include="Img\usuario.jpg" />
-    <Content Include="Repositorio\XMLFile1.xml">
+    <Content Include="Repositorio\ListaParaFazer.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
@@ -299,6 +303,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Reports\" />
+    <Folder Include="Views\Vitrine\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

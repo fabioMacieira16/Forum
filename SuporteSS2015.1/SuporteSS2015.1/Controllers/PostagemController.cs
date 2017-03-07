@@ -18,7 +18,8 @@ namespace SuporteSS2015._1.Controllers
         public ActionResult Index()
         {
             //var nomeTopico = db.Categorias.Find(Id);
-            var postagem = db.Postagem.Include(p => p.Categoria);
+            //lista somente o top de 10 Posts
+            var postagem = db.Postagem.Include(p => p.Categoria).Take(10);
 
             //ViewBag.nomeTopico = nomeTopico.Categoria;
             return View(postagem.ToList());
