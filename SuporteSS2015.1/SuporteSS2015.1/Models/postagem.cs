@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -11,6 +12,7 @@ namespace SuporteSS2015._1.Models
         public string Topico { get; set; }
         public string Mensagem { get; set; }
         public DateTime DataPostagem { get; set; }
+        [DisplayName("Categoria")]
         public int CategoriaId { get; set; }
         public virtual Categorias Categoria { get; set; }
         public virtual ICollection<Resposta> Resposta { get; set; }
