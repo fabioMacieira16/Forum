@@ -21,12 +21,13 @@
                         @Html.DisplayFor(modelItem => item.DataResposta)
                     </b>
                 </div>
-                @Html.DisplayFor(modelItem => item.Respostas)
+                <label>@Html.Raw(item.Respostas)</label>
+                <br />
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 <div class="panel-body">
                     @*<span class="badge">Postagem.Resposta.Count</span>*@
-                    @Html.ActionLink("Respostas", "Create", "Respostas", new { topico = item.Postagem.Topico }, null)
+                    @Html.ActionLink("Respostas", "Create", "Respostas", new { id = item.Postagem.Id }, null)
                 </div>
             </div>
         }

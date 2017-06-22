@@ -21,6 +21,10 @@ namespace SuporteSS2015._1.Controllers
             //lista somente o top de 10 Posts
             var postagem = db.Postagem.Include(p => p.Categoria).Take(10);
 
+            ViewBag.Categoria = db.Categorias.Count();
+            ViewBag.Postagens = db.Postagem.Count();
+            ViewBag.Respostas = db.Resposta.Count();
+
             //ViewBag.nomeTopico = nomeTopico.Categoria;
             return View(postagem.ToList());
         }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 using SuporteSS2015._1.Models;
 
 namespace SuporteSS2015._1.Controllers
@@ -15,9 +16,9 @@ namespace SuporteSS2015._1.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Respostas
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            var resposta = db.Resposta.Include(r => r.Postagem);
+            var resposta = db.Resposta.Where(p => p.PostagemId == id).Include(r => r.Postagem);
             return View(resposta.ToList());
         }
 
@@ -37,9 +38,15 @@ namespace SuporteSS2015._1.Controllers
         }
 
         // GET: Respostas/Create
-        public ActionResult Create(string topico)
+        public ActionResult Create(int id)
         {
-            ViewBag.PostagemId = new SelectList(db.Postagem.Where(p => p.Topico == topico), "Id", "Topico");
+            var query = db.Postagem.Where(p => p.Id == id);
+            ViewBag.PostageId = new SelectList(query, "Id", "Topico");
+
+            var firstOrDefault = query.FirstOrDefault();
+            ViewBag.Mensagem = firstOrDefault != null ? firstOrDefault.Mensagem : "Mensagem não encontrada";
+            ViewBag.Postagem = firstOrDefault;
+
             return View();
         }
 
@@ -56,7 +63,7 @@ namespace SuporteSS2015._1.Controllers
             {
                 db.Resposta.Add(resposta);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { id = resposta.PostagemId });
             }
 
             ViewBag.PostagemId = new SelectList(db.Postagem, "Id", "Topico", resposta.PostagemId);

@@ -24,6 +24,7 @@ namespace SuporteSS2015._1.Models
             : base("SuporteSS", throwIfV1Schema: false)
         {
          // Database.SetInitializer(new DropCreateDatabaseAlways<ApplicationDbContext>());
+            //Database.SetInitializer(new CreateDatabaseIfNotExists<ApplicationDbContext>());
         }
         public virtual DbSet<Analistas> Analistas { get; set; }
         public virtual DbSet<TipoEscala> TipoEscala { get; set; }

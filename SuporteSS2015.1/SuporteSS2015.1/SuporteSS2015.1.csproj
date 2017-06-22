@@ -314,6 +314,7 @@
     <Content Include="Views\Respostas\Edit.cshtml" />
     <Content Include="Views\Respostas\Index.cshtml" />
     <Content Include="Views\Postagem\Create.cshtml" />
+    <Content Include="Views\Respostas\Create - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
