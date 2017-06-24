@@ -45,6 +45,14 @@ namespace SuporteSS2015._1.Controllers
 
             var firstOrDefault = query.FirstOrDefault();
             ViewBag.Mensagem = firstOrDefault != null ? firstOrDefault.Mensagem : "Mensagem não encontrada";
+
+
+            ViewBag.PostagemId = new SelectList(query, "Id", "Topico");
+
+            var firstOrDefault = query.FirstOrDefault();
+
+            ViewBag.Mensagem = firstOrDefault != null ? firstOrDefault.Mensagem:"Mensagem não encontrada";
+
             ViewBag.Postagem = firstOrDefault;
 
             return View();
@@ -64,6 +72,8 @@ namespace SuporteSS2015._1.Controllers
                 db.Resposta.Add(resposta);
                 db.SaveChanges();
                 return RedirectToAction("Index", new { id = resposta.PostagemId });
+                return RedirectToAction("Index",new {id=resposta.PostagemId});
+
             }
 
             ViewBag.PostagemId = new SelectList(db.Postagem, "Id", "Topico", resposta.PostagemId);
