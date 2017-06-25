@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="SuporteSS-Web.config Connection String" description="SuporteSS Connection String used in web.config by the application to access the database." defaultValue="Server=.;Database=SuporteSS20151Context;user id=sa;password=sisco12!@;MultipleActiveResultSets=True;Asynchronous Processing=True;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\defcore\\Documents\\Visual\ Studio\ 2013\\Projects\\Forum2017\\SuporteSS2015\.1\\SuporteSS2015\.1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SuporteSS']/@connectionString" />
-  </parameter>
-</parameters>
