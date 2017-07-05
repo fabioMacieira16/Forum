@@ -40,13 +40,15 @@ namespace SuporteSS2015._1.Controllers
         // GET: Respostas/Create
         public ActionResult Create(int id)
         {
-            var query = db.Postagem.Where(p => p.Id == id);
-            ViewBag.PostageId = new SelectList(query, "Id", "Topico");
+             var query = db.Postagem.Where(p => p.Id == id);
+ 
+             ViewBag.PostagemId = new SelectList(query, "Id", "Topico");
+ 
+             var firstOrDefault = query.FirstOrDefault();
+ 
+            ViewBag.Mensagem = firstOrDefault != null ? firstOrDefault.Mensagem:"Mensagem não encontrada";
+             ViewBag.Postagem = firstOrDefault;
 
-            var firstOrDefault = query.FirstOrDefault();
-            ViewBag.Mensagem = firstOrDefault != null ? firstOrDefault.Mensagem : "Mensagem não encontrada";
-
-            ViewBag.Postagem = firstOrDefault;
             return View();
         }
 
