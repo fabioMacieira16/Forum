@@ -1,0 +1,96 @@
+﻿@model SuporteSS2015._1.Models.Topico_forum
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cadastrar novo tópico</h2>
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label for="descricao" class="control-label col-md-2">Descrição</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Topico, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @*<div class="form-group">
+                <label for="data" class="control-label col-md-2">Data Cadastro</label>
+                <div class="col-lg-10">
+                    @Html.EditorFor(model => model.data_cadastro, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.data_cadastro, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+<div>@Html.ActionLink("Listagem", "Index")</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<!Doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Postagem</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css" />
+    @Styles.Render("~/Content/summernote")
+    <link rel="stylesheet" href="~/Content/summernote.css"/>
+
+</head>
+ <body>
+     <div class="row">
+         <div class="container">
+             <div class="col-lg-12">
+
+                 <form action="">
+
+                     <div class="form-group">
+                         <label for="">Descrição</label>
+                         <textarea name="" id="descricao" rows="10" class="form-control"></textarea>
+                     </div>
+
+                     <button type="submit" class="btn btn-submit">Submite</button>
+
+                 </form>
+             </div>
+         </div>
+     </div>
+     <script src="~/Scripts/jquery-1.10.2.js"></script>
+     <script src="~/Scripts/bootstrap.min.js"></script>
+     <script src="~/Scripts/summernote.min.js"></script>
+     <script>
+         $(document).ready(function() {
+             $('descricao').summernote();
+
+         });
+     </script>
+ </body>
+</html>*@
