@@ -26,7 +26,7 @@ namespace SuporteSS2015._1.Models
             //apaga o banco de dados - caso vc queira começar como banco limpo
             //Database.SetInitializer(new DropCreateDatabaseAlways<ApplicationDbContext>());
             //Usar o mesmo bando de dados
-            //Database.SetInitializer(new CreateDatabaseIfNotExists<ApplicationDbContext>());
+            Database.SetInitializer(new CreateDatabaseIfNotExists<ApplicationDbContext>());
         }
         public virtual DbSet<Analistas> Analistas { get; set; }
         public virtual DbSet<TipoEscala> TipoEscala { get; set; }

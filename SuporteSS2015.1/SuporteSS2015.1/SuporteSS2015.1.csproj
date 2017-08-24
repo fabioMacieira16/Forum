@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -108,12 +115,6 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -191,6 +192,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\application.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\css.css" />
@@ -199,10 +201,7 @@
     <Content Include="Content\style-responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\summernote.css" />
-    <Content Include="Controllers\Content\bootstrap-responsive.min.css" />
-    <Content Include="Controllers\Content\bootstrap-theme.min.css" />
-    <Content Include="Controllers\Content\bootstrap.min.css" />
-    <Content Include="Controllers\Content\font-awesome.min.css" />
+    <Content Include="Content\toolkit-inverse.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -223,14 +222,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Controllers\Content\bootstrap.min.css.map" />
-    <Content Include="Controllers\Content\bootstrap.css.map" />
-    <Content Include="Controllers\Content\bootstrap-theme.min.css.map" />
-    <Content Include="Controllers\Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\ForumSS.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\application.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\chart.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -240,6 +237,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-migrate-1.0.0.min.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -249,6 +247,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\summernote.js" />
     <Content Include="Scripts\summernote.min.js" />
+    <Content Include="Scripts\tablesorter.min.js" />
+    <Content Include="Scripts\tether.min.js" />
+    <Content Include="Scripts\toolkit.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -315,6 +316,8 @@
     <Content Include="Views\Respostas\Index.cshtml" />
     <Content Include="Views\Postagem\Create.cshtml" />
     <Content Include="Views\Respostas\Create - Copy.cshtml" />
+    <Content Include="Views\Manage\Administrativo.cshtml" />
+    <Content Include="Views\Manage\Index - Cópia .cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
