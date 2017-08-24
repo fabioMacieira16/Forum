@@ -4,11 +4,12 @@
     <FORUM>
                   (Prioridade 1)
                   Criar a pagina administrativa
-                  criar os campos na pagina do admistrador os campos cadastro
-                    analistas
-                    escalas
+                # criar os campos na pagina do admistrador os campos cadastro
+                   # Usuario
+                   # analistas
+                    #escalas
                     agendamento
-                    analistas
+                   # analistas
                     postagem
                     tipoescala
                     cadatro de usuários
