@@ -97,6 +97,20 @@ namespace SuporteSS2015._1.Controllers
             };
             return View(model);
         }
+        public async Task<ActionResult> ListaDeUsuarios(ManageMessageId? message)
+        {
+            var userId = User.Identity.GetUserId();
+            var model = new IndexViewModel
+            {
+                HasPassword = HasPassword(),
+                PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
+                TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
+                Logins = await UserManager.GetLoginsAsync(userId),
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+            };
+            return View(model);
+        }
+
 
         //
         // POST: /Manage/RemoveLogin
