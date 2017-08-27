@@ -1,7 +1,7 @@
 ﻿@model SuporteSS2015._1.Models.IndexViewModel
 @*@{
-    ViewBag.Title = "Pefil";
-}*@
+        ViewBag.Title = "Pefil";
+    }*@
 
 @*<h2>@ViewBag.Title.</h2>
 
@@ -52,7 +52,9 @@
                 </dd>
             </dl>
         </div>*@
-
+@{
+    Layout = null;
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +96,7 @@
                         <button class="bqe bqg brj" type="button" data-toggle="collapse" data-target="#nav-toggleable-md">
                             <span class="aep">Toggle nav</span>
                         </button>
-                        <a class="brk bsi" href="index.html">
+                        <a class="brk bsi" href="~/Home/Index">
                             <span class="bv bik brl"></span>
                         </a>
                     </div>
@@ -109,35 +111,33 @@
                         <ul class="nav qq nav-stacked xx">
                             <li class="ayx">Dashboards</li>
                             <li class="qp">
-                                <a class="qn active" href="index.html">Overview</a>
+                                <a class="qn active" href="~/Manage/">Painel de controle</a>
                             </li>
                             <li class="qp">
-                                <a class="qn " href="order-history/index.html">Order history</a>
+                                <a class="qn " href="~/Account/Register">Usuário</a>
                             </li>
                             <li class="qp">
-                                <a class="qn " href="fluid/index.html">Fluid layout</a>
+                                <a class="qn " href="~/Analistas/Index">Analistas</a>
                             </li>
                             <li class="qp">
-                                <a class="qn " href="icon-nav/index.html">Icon nav</a>
+                                <a class="qn " href="~/Escalas/Index">Escala</a>
                             </li>
 
-                            <li class="ayx">More</li>
+                            <li class="ayx">Mais</li>
                             <li class="qp">
-                                <a class="qn " href="docs/index.html">
-                                    Toolkit docs
+                                <a class="qn " href="~/Categorias/Index">
+                                    Categorias
                                 </a>
                             </li>
                             <li class="qp">
-                                <a class="qn" href="http://getbootstrap.com" target="blank">
-                                    Bootstrap docs
-                                </a>
+                                <a class="qn" href="~/Postagem/Create" target="blank">Postagem</a>
                             </li>
                             <li class="qp">
-                                <a class="qn " href="index-light/index.html">Light UI</a>
+                                <a class="qn " href="/TipoEscala/Index">Tipo de Escalas</a>
                             </li>
                             <li class="qp">
                                 <a class="qn" href="#docsModal" data-toggle="modal">
-                                    Example modal
+                                    Perfil
                                 </a>
                             </li>
                         </ul>
@@ -148,8 +148,8 @@
             <div class="es bsk">
                 <div class="brv">
                     <div class="brw">
-                        <h6 class="bry">Dashboards</h6>
-                        <h2 class="brx">Overview</h2>
+                        <h6 class="bry">Área de adminstracão</h6>
+                        <h2 class="brx">Painel de controle</h2>
                     </div>
 
                     <div class="qb brz">
@@ -497,12 +497,8 @@
     <script src="~/Scripts/toolkit.js"></script>
     <script src="~/Scripts/application.js"></script>
     <script>
-      // execute/clear BS loaders for docs
-      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+        // execute/clear BS loaders for docs
+        $(function () { while (window.BS && window.BS.loader && window.BS.loader.length) { (window.BS.loader.pop())() } })
     </script>
 </body>
 </html>
-
-
-
-

@@ -63,8 +63,8 @@
                     <span class="glyphicon glyphicon-hand-right" aria-busy ="true"></span>
                     @Html.Raw(item.Mensagem)
                     <strong> Categoria - @Html.DisplayFor(modelItem => item.Categoria.Categoria) </strong><br />  
-                    @Html.ActionLink("Responder", "Create", "Respostas", new {id = item.Id},null) |
-                    @Html.ActionLink("Listar", "Index", "Respostas", new { id = item.Id}, null)
+                    @Html.ActionLink("Responder", "Create", "Respostas", new {id = item.Id},new { @class= "btn btn-info" }) |
+                    @Html.ActionLink("Listar", "Index", "Respostas", new { id = item.Id}, new { @class = "btn btn-default" })
                      <span class="badge">@item.Resposta.Count</span>
                 </div>
             </div>

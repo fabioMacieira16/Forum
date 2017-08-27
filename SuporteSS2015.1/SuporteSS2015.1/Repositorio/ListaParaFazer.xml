@@ -1,58 +1,51 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <implemente>
---------------------------------------------------------------------------------------------------------
-    <FORUM>
-                  (Prioridade 1)
-                  Criar a pagina administrativa
-                # criar os campos na pagina do admistrador os campos cadastro
-                   # Usuario
-                   # analistas
-                    #escalas
-                    agendamento
-                   # analistas
-                    postagem
-                    tipoescala
-                    cadatro de usuários
-                  criar a pagina do usuario para fazer alteraçoes (foto e senha)
-                  
-                  ao cadastrar o usuario informa o nikname
-                  ao logar informa o nik name
-                  usuario master
-            
-        (Prioridade 2)   
-        conserta em todas as telas os botoes
-        cadatro de categorias
-        cadastro de analistas
-        tipos de escalas
-        cadastra de escalas
-        
-         (Prioridade 3)
-         1 destaques dos forum(os 10 ultimos post) 
-                3  lista a quantidade de paginas para usuário
-                4 fazer um filtro de busca
-                5 todo post vai ter um link para abrir na sua aba
-                6 da mesma forma vai ser no buscar
-                7 responder a pergunta na mesma pagina
-             4 Usuario
-             informa o usuario que fez o post
+  --------------------------------------------------------------------------------------------------------
+  <FORUM>
+    (Prioridade 1) 
+    # Criar a pagina administrativa
+    Corrigir todos botoes das paginas abaixo
+    # analistas
+      # -botoes
+      - Verificar porque nao esta salvando ao editar
+   
+    Perfil
+    - Redirecionar para a pagina Perfil
+-------------------------------------------------------------------
+    criar a pagina do usuario para fazer alteraçoes (foto e senha)
 
-              </FORUM>
-------------------------------------------------------------------------------------------------
-    <Agenda>
-            Regras
-              1 todos do site podem ver a agenda(mais só os administrados podem organizar as agendas)
-          
-             
-             Outros
-                1 Armazenar as datas por Ex(Janeiro, Fevereiro)
-                2 Criar um Filtro
-            </Agenda>
---------------------------------------------------------------------------------------------------------
+    ao cadastrar o usuario informa o nikname
+    ao logar informa o nik name do usuario master
+-------------------------------------------------------------------
+    (Prioridade 2)
+    conserta em todas as telas os botoes
+-------------------------------------------------------------------
+    (Prioridade 3)
+    1 destaques dos forum(os 10 ultimos post)
+    3  lista a quantidade de paginas para usuário
+    4 fazer um filtro de busca
+    5 todo post vai ter um link para abrir na sua aba
+    6 da mesma forma vai ser no buscar
+    7 responder a pergunta na mesma pagina
+    4 Usuario
+    informa o usuario que fez o post
+
+  </FORUM>
+  ------------------------------------------------------------------------------------------------
+  <Agenda>
+    Regras
+    1 todos do site podem ver a agenda(mais só os administrados podem organizar as agendas)
+
+    Outros
+    1 Armazenar as datas por Ex(Janeiro, Fevereiro)
+    2 Criar um Filtro
+  </Agenda>
+  --------------------------------------------------------------------------------------------------------
   <Informações>
     criar o local para que o usuario possa mandar sugestões e melhorias para o forum em sí
-      Nome da pessoa
-      assunto
-      contato
-      Esse mail direcionar para   
+    Nome da pessoa
+    assunto
+    contato
+    Esse mail direcionar para
   </Informações>
 </implemente>

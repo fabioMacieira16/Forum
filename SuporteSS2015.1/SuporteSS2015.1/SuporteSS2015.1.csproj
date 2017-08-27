@@ -304,7 +304,6 @@
     <Content Include="Views\Categorias\Delete.cshtml" />
     <Content Include="Views\Categorias\Edit.cshtml" />
     <Content Include="Views\Categorias\Index.cshtml" />
-    <Content Include="Views\Postagem\Createteste.cshtml" />
     <Content Include="Views\Postagem\Delete.cshtml" />
     <Content Include="Views\Postagem\Details.cshtml" />
     <Content Include="Views\Postagem\Edit.cshtml" />
@@ -315,7 +314,6 @@
     <Content Include="Views\Respostas\Edit.cshtml" />
     <Content Include="Views\Respostas\Index.cshtml" />
     <Content Include="Views\Postagem\Create.cshtml" />
-    <Content Include="Views\Respostas\Create - Copy.cshtml" />
     <Content Include="Views\Manage\Administrativo.cshtml" />
     <Content Include="Views\Manage\Index - Cópia .cshtml" />
     <Content Include="Views\Manage\ListaDeUsuarios.cshtml" />

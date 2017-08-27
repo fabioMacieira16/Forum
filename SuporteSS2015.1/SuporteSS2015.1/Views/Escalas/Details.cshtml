@@ -4,11 +4,8 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Details</h2>
-
+<h2>Analista de Plantão</h2>
 <div>
-    <h4>Escala</h4>
     <hr />
     <table class="table table-striped">
         <tr>
@@ -48,5 +45,5 @@
     </table>
 </div>
 <p>
-    @Html.ActionLink("Voltar", "Index")
+    @Html.ActionLink("Voltar", "Index" , null, new { @class = "btn btn-default"})
 </p>
