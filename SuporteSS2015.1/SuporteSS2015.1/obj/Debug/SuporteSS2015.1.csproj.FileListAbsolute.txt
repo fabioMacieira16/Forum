@@ -522,6 +522,8 @@ C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteS
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\System.Web.WebPages.dll
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\System.Web.WebPages.Razor.dll
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\WebGrease.dll
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\EntityFramework.xml
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\EntityFramework.SqlServer.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\System.Web.Helpers.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\System.Web.Mvc.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\System.Web.Optimization.xml
@@ -531,8 +533,6 @@ C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteS
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\System.Web.WebPages.Razor.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Antlr3.Runtime.pdb
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Newtonsoft.Json.xml
-C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\EntityFramework.xml
-C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\EntityFramework.SqlServer.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
@@ -545,7 +545,7 @@ C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteS
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.csprojResolveAssemblyReference.cache
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.csproj.CoreCompileInputs.cache
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.dll
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.pdb
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.csprojResolveAssemblyReference.cache

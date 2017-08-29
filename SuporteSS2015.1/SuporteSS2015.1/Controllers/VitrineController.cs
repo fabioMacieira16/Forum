@@ -10,7 +10,7 @@ namespace SuporteSS2015._1.Controllers
     public class VitrineController : Controller
     {
         //Criando a paginação
-        private Postagem _postagem;
+        //private Postagem _postagem;
         public int PostagemPoPagina = 8;
         //
         // GET: /Vitrine/

@@ -73,8 +73,8 @@ namespace SuporteSS2015._1.Controllers
                 return View(model);
             }
 
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, change to shouldLockout: true
+            // Isso não conta as falhas de login em direção ao bloqueio da conta
+            // Para habilitar falhas de senha para ativar o bloqueio da conta, mude para shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
@@ -151,7 +151,7 @@ namespace SuporteSS2015._1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, NomeUsuario = model.NomeUsuario, UserMaster = model.UserMaster };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

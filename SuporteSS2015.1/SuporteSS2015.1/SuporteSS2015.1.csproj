@@ -187,7 +187,6 @@
     <Compile Include="Models\Resposta.cs" />
     <Compile Include="Models\TipoEscala.cs" />
     <Compile Include="Models\Categorias.cs" />
-    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
