@@ -11,6 +11,7 @@
     <link href="~/Content/css.css" rel="stylesheet" />
     <link href="~/Content/style-responsive.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
     @RenderSection("css", required: false)
 
@@ -22,9 +23,10 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
                 </button>
+               
                 @Html.ActionLink("Solucão Sistemas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -32,9 +34,12 @@
                     <li>@Html.ActionLink("Download", "Download", "Home")
                     <li>@Html.ActionLink("Escalas", "Agenda", "Home")</li>
                 </ul>
+
                 @Html.Partial("_LoginPartial")
             </div>
+
         </div>
+
     </div>
     <div class="container body-content">
         @RenderBody()

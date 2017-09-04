@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<SuporteSS2015._1.Models.Postagem>
+    @using Microsoft.AspNet.Identity
+ 
 
 @{
     ViewBag.Title = "Index";
@@ -54,7 +56,9 @@
                 <div class="panel-heading">
                     <b>
                         <span class="glyphicon glyphicon-user" aria-hidden="true">
-                         @*@Html.DisplayFor(modelItem => item.usuario.nome)*@</span>
+                           @*Gravar o usuario ao postar*@
+                        @User.Identity.GetUserName()
+                        </span>
                         @Html.DisplayFor(modelItem => item.Topico)
                         Publicado em: @Html.DisplayFor(modelItem => item.DataPostagem)
                     </b>

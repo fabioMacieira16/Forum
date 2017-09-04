@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuporteSS2015._1.Areas.Administrativo.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,5 +17,7 @@ namespace SuporteSS2015._1.Models
         public int CategoriaId { get; set; }
         public virtual Categorias Categoria { get; set; }
         public virtual ICollection<Resposta> Resposta { get; set; }
+        //usuario
+        //public virtual ICollection<RegisterViewModel> NomeUsuarioView { get; set; }
     }
 }

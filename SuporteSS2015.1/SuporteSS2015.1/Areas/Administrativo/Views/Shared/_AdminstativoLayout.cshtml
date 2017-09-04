@@ -1,0 +1,453 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+        Overview &middot; Dashboard theme &middot; Official Bootstrap Themes
+    </title>
+
+    <link href="~/Content/toolkit-inverse.css" rel="stylesheet" />
+    <link href="~/Content/application.css" rel="stylesheet" />
+    <style>
+        /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+        /* this chunk of css is not part of the toolkit :) */
+        body {
+            width: 1px;
+            min-width: 100%;
+            *width: 100%;
+        }
+    </style>
+</head>
+
+ <div> 
+        @if (TempData["mensagem"] != null)
+        {
+            <div class="alert alert-success">@TempData["mensagem"]</div>
+        }
+        @RenderBody()
+ </div>
+<body>
+    <div class="bw">
+        <div class="di">
+            <div class="em brh">
+                <nav class="bro">
+                    <div class="bri">
+                        <button class="bqe bqg brj" type="button" data-toggle="collapse" data-target="#nav-toggleable-md">
+                            <span class="aep">Toggle nav</span>
+                        </button>
+                        <a class="brk bsi" href="~/Home/Index">
+                            <span class="bv bik brl"></span>
+                        </a>
+                    </div>
+
+                    <div class="collapse bql" id="nav-toggleable-md">
+                        <form class="brm">
+                            <input class="form-control" type="text" placeholder="Search...">
+                            <button type="submit" class="po">
+                                <span class="bv bje"></span>
+                            </button>
+                        </form>
+                        <ul class="nav qq nav-stacked xx">
+                            <li class="ayx">Dashboards</li>
+                            <li class="qp">
+                                <a class="qn active" href="~/Manage/">Painel de controle</a>
+                            </li>
+                            <li class="qp">
+                                <a class="qn " href="~/Account/Register">Usuário</a>
+                            </li>
+                            <li class="qp">
+                                <a class="qn " href="~/Analistas/Index">Analistas</a>
+                            </li>
+                            <li class="qp">
+                                <a class="qn " href="~/Escalas/Index">Escala</a>
+                            </li>
+
+                            <li class="ayx">Mais</li>
+                            <li class="qp">
+                                <a class="qn " href="~/Categorias/Index">
+                                    Categorias
+                                </a>
+                            </li>
+                            <li class="qp">
+                                <a class="qn" href="~/Postagem/Create" target="blank">Postagem</a>
+                            </li>
+                            <li class="qp">
+                                <a class="qn " href="/TipoEscala/Index">Tipo de Escalas</a>
+                            </li>
+                            <li class="qp">
+                                <a class="qn" href="#docsModal" data-toggle="modal">
+                                    Perfil
+                                </a>
+                            </li>
+                        </ul>
+                        <hr class="bsj afx">
+                    </div>
+                </nav>
+            </div>
+            <div class="es bsk">
+                <div class="brv">
+                    <div class="brw">
+                        <h6 class="bry">Área de adminstracão</h6>
+                        <h2 class="brx">Painel de controle</h2>
+                    </div>
+
+                    <div class="qb brz">
+                        <div class="ayt brg">
+                            <input type="text" value="01/01/15 - 01/08/15" class="form-control" data-provide="datepicker">
+                            <span class="bv bck"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="afx">
+
+                <div class="di awt agl">
+                    <div class="en agg amz">
+                        <div class="azy aim">
+                            <canvas class="bra"
+                                    width="200" height="200"
+                                    data-chart="doughnut"
+                                    data-dataset="[230, 130]"
+                                    data-dataset-options="{ borderColor: '#252830', backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+                                    data-labels="['Returning', 'New']"></canvas>
+                        </div>
+                        <strong class="axn">Traffic</strong>
+                        <h4>New vs Returning</h4>
+                    </div>
+                    <div class="en agg amz">
+                        <div class="azy aim">
+                            <canvas class="bra"
+                                    width="200" height="200"
+                                    data-chart="doughnut"
+                                    data-dataset="[330,30]"
+                                    data-dataset-options="{ borderColor: '#252830', backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+                                    data-labels="['Returning', 'New']"></canvas>
+                        </div>
+                        <strong class="axn">Revenue</strong>
+                        <h4>New vs Recurring</h4>
+                    </div>
+                    <div class="en agg amz">
+                        <div class="azy aim">
+                            <canvas class="bra"
+                                    width="200" height="200"
+                                    data-chart="doughnut"
+                                    data-dataset="[100,260]"
+                                    data-dataset-options="{ borderColor: '#252830', backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+                                    data-labels="['Referrals', 'Direct']"></canvas>
+                        </div>
+                        <strong class="axn">Traffic</strong>
+                        <h4>Direct vs Referrals</h4>
+                    </div>
+                </div>
+
+                <div class="brc agl afz">
+                    <h3 class="brd bre">Quick stats</h3>
+                </div>
+
+                <div class="di bsl">
+                    <div class="ep fm afz ang ate">
+                        <div class="bsm bqv">
+                            <div class="ahm">
+                                <span class="bqq">Page views</span>
+                                <h2 class="bqp">
+                                    1,293
+                                    <small class="bqr bqs">5%</small>
+                                </h2>
+                                <hr class="bqz afe">
+                            </div>
+                            <canvas id="sparkline1" width="378" height="94" class="bsn"
+                                    data-chart="spark-line"
+                                    data-dataset="[[28,68,41,43,96,45,100]]"
+                                    data-labels="['a','b','c','d','e','f','g']"
+                                    style="width: 189px; height: 47px;"></canvas>
+                        </div>
+                    </div>
+                    <div class="ep fm afz ang ate">
+                        <div class="bsm bqy">
+                            <div class="ahm">
+                                <span class="bqq">Downloads</span>
+                                <h2 class="bqp">
+                                    758
+                                    <small class="bqr bqt">1.3%</small>
+                                </h2>
+                                <hr class="bqz afe">
+                            </div>
+                            <canvas id="sparkline1" width="378" height="94" class="bsn"
+                                    data-chart="spark-line"
+                                    data-dataset="[[4,34,64,27,96,50,80]]"
+                                    data-labels="['a', 'b','c','d','e','f','g']"
+                                    style="width: 189px; height: 47px;"></canvas>
+                        </div>
+                    </div>
+                    <div class="ep fm afz ang ate">
+                        <div class="bsm bqw">
+                            <div class="ahm">
+                                <span class="bqq">Sign-ups</span>
+                                <h2 class="bqp">
+                                    1,293
+                                    <small class="bqr bqs">6.75%</small>
+                                </h2>
+                                <hr class="bqz afe">
+                            </div>
+                            <canvas id="sparkline1" width="378" height="94" class="bsn"
+                                    data-chart="spark-line"
+                                    data-dataset="[[12,38,32,60,36,54,68]]"
+                                    data-labels="['a', 'b','c','d','e','f','g']"
+                                    style="width: 189px; height: 47px;"></canvas>
+                        </div>
+                    </div>
+                    <div class="ep fm afz ang ate">
+                        <div class="bsm bqx">
+                            <div class="ahm">
+                                <span class="bqq">Downloads</span>
+                                <h2 class="bqp">
+                                    758
+                                    <small class="bqr bqt">1.3%</small>
+                                </h2>
+                                <hr class="bqz afe">
+                            </div>
+                            <canvas id="sparkline1" width="378" height="94" class="bsn"
+                                    data-chart="spark-line"
+                                    data-dataset="[[43,48,52,58,50,95,100]]"
+                                    data-labels="['a', 'b','c','d','e','f','g']"
+                                    style="width: 189px; height: 47px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="agl">
+
+                <div class="di">
+                    <div class="ep agn">
+                        <div class="by afz">
+                            <h6 class="azi">
+                                Countries
+                            </h6>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 62.4%;"></span>
+                                United States
+                                <span class="bso axn">62.4%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 15.0%;"></span>
+                                India
+                                <span class="bso axn">15.0%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 5.0%;"></span>
+                                United Kingdom
+                                <span class="bso axn">5.0%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 5.0%;"></span>
+                                Canada
+                                <span class="bso axn">5.0%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 4.5%;"></span>
+                                Russia
+                                <span class="bso axn">4.5%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 2.3%;"></span>
+                                Mexico
+                                <span class="bso axn">2.3%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 1.7%;"></span>
+                                Spain
+                                <span class="bso axn">1.7%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 1.5%;"></span>
+                                France
+                                <span class="bso axn">1.5%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 1.4%;"></span>
+                                South Africa
+                                <span class="bso axn">1.4%</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span class="azj" style="width: 1.2%;"></span>
+                                Japan
+                                <span class="bso axn">1.2%</span>
+                            </a>
+
+                        </div>
+                        <a href="#" class="ce pi ahr">All countries</a>
+                    </div>
+                    <div class="ep agn">
+                        <div class="by afz">
+                            <h6 class="azi">
+                                Most visited pages
+                            </h6>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/ (Logged out)</span>
+                                <span class="bsp axn">3,929,481</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/ (Logged in)</span>
+                                <span class="bsp axn">1,143,393</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/tour</span>
+                                <span class="bsp axn">938,287</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/features/something</span>
+                                <span class="bsp axn">749,393</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/features/another-thing</span>
+                                <span class="bsp axn">695,912</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/users/username</span>
+                                <span class="bsp axn">501,938</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/page-title</span>
+                                <span class="bsp axn">392,842</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/some/page-slug</span>
+                                <span class="bsp axn">298,183</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/another/directory/and/page-title</span>
+                                <span class="bsp axn">193,129</span>
+                            </a>
+
+                            <a class="rp tr yg" href="#">
+                                <span>/one-more/page/directory/file-name</span>
+                                <span class="bsp axn">93,382</span>
+                            </a>
+
+                        </div>
+                        <a href="#" class="ce pi ahr">View all pages</a>
+                    </div>
+                </div>
+
+                <div class="by afz">
+                    <h6 class="azi">
+                        Devices and resolutions
+                    </h6>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Desktop (1920x1080)</span>
+                        <span class="axn">3,929,481</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Desktop (1366x768)</span>
+                        <span class="axn">1,143,393</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Desktop (1440x900)</span>
+                        <span class="axn">938,287</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Desktop (1280x800)</span>
+                        <span class="axn">749,393</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Tablet (1024x768)</span>
+                        <span class="axn">695,912</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Tablet (768x1024)</span>
+                        <span class="axn">501,938</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Phone (320x480)</span>
+                        <span class="axn">392,842</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Phone (720x450)</span>
+                        <span class="axn">298,183</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Desktop (2560x1080)</span>
+                        <span class="axn">193,129</span>
+                    </a>
+
+                    <a class="rp tr yg" href="#">
+                        <span>Desktop (2560x1600)</span>
+                        <span class="axn">93,382</span>
+                    </a>
+
+                </div>
+                <a href="#" class="ce pi ahr">View all devices</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="docsModal" class="cb fade" tabindex="-1" role="dialog" aria-labelledby="bsq">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="uf">
+                    <h4 class="modal-title" id="myModalLabel">Example modal</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>You're looking at an example modal in the dashboard theme.</p>
+                </div>
+                <div class="ug">
+                    <button type="button" class="ce pb" data-dismiss="modal">Cool, got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/tether.min.js"></script>
+    <script src="~/Scripts/chart.js"></script>
+    <script src="~/Scripts/tablesorter.min.js"></script>
+    <script src="~/Scripts/toolkit.js"></script>
+    <script src="~/Scripts/application.js"></script>
+    <script>
+        // execute/clear BS loaders for docs
+        $(function () { while (window.BS && window.BS.loader && window.BS.loader.length) { (window.BS.loader.pop())() } })
+    </script>
+</body>
+</html>

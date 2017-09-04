@@ -493,6 +493,8 @@ C:\src\forum\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Microso
 C:\src\forum\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.csprojResolveAssemblyReference.cache
 C:\src\forum\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.dll
 C:\src\forum\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.pdb
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\SuporteSS2015.1.dll.config
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\SuporteSS2015.1.dll
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\SuporteSS2015.1.pdb
@@ -542,10 +544,7 @@ C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteS
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Facebook.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.csproj.CoreCompileInputs.cache
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.dll
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.pdb
-C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.csprojResolveAssemblyReference.cache

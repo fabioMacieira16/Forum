@@ -2,14 +2,28 @@
 <implemente>
   --------------------------------------------------------------------------------------------------------
   <FORUM>
+    (Prioridade 1)
+    Criado o area administrativa
+    consertar os controles
+    categoria
+    Escala
+    tIPOS DE ESTACA
 
-   (Prioridade 2)
-    ao cadastrar o usuario informa o nikname
-    ao logar informa o nik name do usuario master
+    LINKAR NO PAINEL DE CONTROLE - ESTA DANDO ERRO
+    categoria
+    Escala
+    tIPOS DE ESTACA
+
+    (Prioridade 2)
+    trocar de Email pelo nome do usuario
+    verificar se duas pessoas não postarao com o mesmo nik name
+
+    informa quem fez o post
+
     criar a pagina do usuario para fazer alteraçoes (foto e senha)
-    
--------------------------------------------------------------------
-    (Prioridade 3)
+    Criar o botao de busca
+    -------------------------------------------------------------------
+    (Prioridade 2)
     1 destaques dos forum(os 10 ultimos post)
     3  lista a quantidade de paginas para usuário
     4 fazer um filtro de busca
@@ -18,7 +32,6 @@
     7 responder a pergunta na mesma pagina
     4 Usuario
     informa o usuario que fez o post
-    
     criar a opcao para resgata a senha
 
   </FORUM>

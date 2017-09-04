@@ -57,7 +57,7 @@ namespace SuporteSS2015._1.Controllers
         [HttpPost]
         //[ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Create([Bind(Include = "Id,Topico,Mensagem,DataPostagem,CategoriaId")] Postagem postagem)
+        public ActionResult Create([Bind(Include = "Id,Topico,Mensagem,DataPostagem,CategoriaId, NomeUsuarioView")] Postagem postagem)
         {
             postagem.DataPostagem = DateTime.Now;
             if (ModelState.IsValid)
