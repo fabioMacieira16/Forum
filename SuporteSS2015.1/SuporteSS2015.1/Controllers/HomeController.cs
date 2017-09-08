@@ -1,13 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SuporteSS2015._1.Models;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace SuporteSS2015._1.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext db;
+
+        public HomeController()
+        {
+            db = new ApplicationDbContext();
+        }
+
+        ~HomeController()
+        {
+            db.Dispose();
+        }
+
+        [HttpGet]
+        public ActionResult Pesquisar()
+        {
+            return View();
+        } 
+
+        [HttpPost]
+        public ActionResult Pesquisar(string texto)
+        {
+            //poder ser ordenado par categoria tambem obser isso!
+            return View(db.Postagem.Where(x => x.Mensagem.Contains(texto)).OrderBy(x => x.Categoria));
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -27,10 +50,11 @@ namespace SuporteSS2015._1.Controllers
         {
             return Redirect("/Postagem/Index");
         }
-        public ActionResult Agenda() 
+        public ActionResult Agenda()
         {
             return Redirect("/Escalas/Details");
         }
 
+        
     }
 }

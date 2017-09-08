@@ -24,22 +24,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               
                 @Html.ActionLink("Solucão Sistemas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Fórum", "Forum", "Home")</li>
                     <li>@Html.ActionLink("Download", "Download", "Home")
-                    <li>@Html.ActionLink("Escalas", "Agenda", "Home")</li>
+                    <li>@Html.ActionLink("Escalas", "Escalas/Details", "Administrativo")</li>
                 </ul>
-
                 @Html.Partial("_LoginPartial")
             </div>
-
         </div>
+        @*@using (Html.BeginForm())
+            {
 
+                 <input type="text" name="texto" id="texto" placeholder="Digite a pesquisa" />
+                 <div><button type="submit" targat="_blank">Filtrar</button></div>
+            }*@
     </div>
     <div class="container body-content">
         @RenderBody()
@@ -48,7 +49,6 @@
             <p>&copy; @DateTime.Now.Year - Suporte Solução Sistemas - Fábio Macieira &reg; </p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">

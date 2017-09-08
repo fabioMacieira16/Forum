@@ -214,6 +214,9 @@
     <Content Include="Img\icon.png" />
     <Content Include="Img\sped.jpg" />
     <Content Include="Img\usuario.jpg" />
+    <Content Include="Repositorio\Comandos Git.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Repositorio\ListaParaFazer.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -229,7 +232,7 @@
     <Content Include="Areas\Administrativo\Views\Shared\_ViewStart.cshtml" />
     <Content Include="Areas\Administrativo\Views\Usuarios\Index.cshtml" />
     <Content Include="Areas\Administrativo\Views\PainelControle\Index.cshtml" />
-    <Content Include="Areas\Administrativo\Views\Categorias\Index.cshtml" />
+    <Content Include="Areas\Administrativo\Views\PainelControle\ListaUsuario.cshtml" />
     <None Include="Properties\PublishProfiles\ForumSS.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\application.js" />
@@ -311,7 +314,7 @@
     <Content Include="Areas\Administrativo\Views\Categorias\Create.cshtml" />
     <Content Include="Areas\Administrativo\Views\Categorias\Delete.cshtml" />
     <Content Include="Areas\Administrativo\Views\Categorias\Edit.cshtml" />
-    <Content Include="Areas\Administrativo\Views\Categorias\1Index.cshtml" />
+    <Content Include="Areas\Administrativo\Views\Categorias\Index.cshtml" />
     <Content Include="Views\Postagem\Delete.cshtml" />
     <Content Include="Views\Postagem\Details.cshtml" />
     <Content Include="Views\Postagem\Edit.cshtml" />
@@ -325,10 +328,13 @@
     <Content Include="Views\Manage\Administrativo.cshtml" />
     <Content Include="Views\Manage\Index - Cópia .cshtml" />
     <Content Include="Views\Manage\ListaDeUsuarios.cshtml" />
+    <Content Include="Views\Home\Pesquisar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Reports\" />
+    <Folder Include="Views\Busca\" />
+    <Folder Include="Views\Consulta\" />
     <Folder Include="Views\Vitrine\" />
   </ItemGroup>
   <ItemGroup>

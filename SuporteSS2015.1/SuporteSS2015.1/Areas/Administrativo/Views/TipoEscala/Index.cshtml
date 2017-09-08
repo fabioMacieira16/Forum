@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SuporteSS2015._1.Models.TipoEscala>
+﻿@model IEnumerable<SuporteSS2015._1.Areas.Administrativo.Models.TipoEscala>
 
 @{
     ViewBag.Title = "Index";
@@ -22,7 +22,7 @@
             @Html.DisplayFor(modelItem => item.TipoEscalas)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id } , new { @class = "btn btn-warning"}) |
+            @Html.ActionLink("Editar", "Edit", new { id= item.Id } , new { @class = "btn btn-warning"}) |
             @Html.ActionLink("Deletar", "Delete", new { id=item.Id }, new {@class = "btn btn-danger" })
         </td>
     </tr>

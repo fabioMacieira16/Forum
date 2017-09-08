@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 
-namespace SuporteSS2015._1.Controllers
+namespace SuporteSS2015._1.Areas.Administrativo.Controllers
 {
     public class CategoriasController : Controller
     {

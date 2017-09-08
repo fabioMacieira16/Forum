@@ -65,7 +65,7 @@
 
     <title>
 
-        Overview &middot; Dashboard theme &middot; Official Bootstrap Themes
+        Painel &middot; Controle &middot; Official Fábio Macieira
 
     </title>
 
@@ -84,12 +84,12 @@
     </style>
 </head>
 
-<div>
+@*<div>
     @if (TempData["mensagem"] != null)
     {
-        <div class="alert alert-success">@TempData["mensagem"]</div>
+        <div classs="alert alert-success">@TempData["mensagem"]</div>
     }
-</div>
+</div>*@
 <body>
     <div class="bw">
         <div class="di">
@@ -133,10 +133,10 @@
                                 </a>
                             </li>
                             <li class="qp">
-                                <a class="qn" href="~/Administrativo/Postagem/Create" target="blank">Postagem</a>
+                                <a class="qn" href="~/Postagem/Create" target="blank">Postagem</a>
                             </li>
                             <li class="qp">
-                                <a class="qn " href="~/Administrativo/TipoEscala/Index">Tipo de Escalas</a>
+                                <a class="qn " href="~/Administrativo/TipoEscala/Index" target="_blank">Tipo de Escalas</a>
                             </li>
                             <li class="qp">
                                 <a class="qn" href="#docsModal" data-toggle="modal">
