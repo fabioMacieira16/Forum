@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using SuporteSS2015._1.Models;
+using Microsoft.AspNet.Identity;
 
 namespace SuporteSS2015._1.Controllers
 {
@@ -18,6 +19,10 @@ namespace SuporteSS2015._1.Controllers
         // GET: Respostas
         public ActionResult Index(int id)
         {
+            var query = db.Postagem.Where(p => p.Id == id);
+            var firstOrDefault = query.FirstOrDefault().Topico;
+            ViewBag.PostTopico = firstOrDefault;
+
             var resposta = db.Resposta.Where(p => p.PostagemId == id).Include(r => r.Postagem);
             return View(resposta.ToList());
         }
@@ -58,8 +63,14 @@ namespace SuporteSS2015._1.Controllers
         [HttpPost]
         //[ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Create([Bind(Include = "Id,Respostas,DataResposta,PostagemId")] Resposta resposta)
+        public ActionResult Create([Bind(Include = "Id,Respostas,DataResposta,PostagemId,UsuarioLogado")] Resposta resposta)
         {
+            var manager = new UserManager<ApplicationUser>
+                  (new Microsoft.AspNet.Identity.EntityFramework.UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var currentUser = manager.FindById(User.Identity.GetUserId());
+
+            resposta.UsuarioLogado = currentUser.NomeUsuario; //User.Identity.Name;
+
             resposta.DataResposta = DateTime.Now;
             if (ModelState.IsValid)
             {

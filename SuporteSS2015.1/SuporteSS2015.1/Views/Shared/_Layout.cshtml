@@ -33,17 +33,17 @@
                     <li>@Html.ActionLink("Escalas", "Escalas/Details", "Administrativo")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Buscar" />
+                </form>
             </div>
         </div>
-        @*@using (Html.BeginForm())
-            {
 
-                 <input type="text" name="texto" id="texto" placeholder="Digite a pesquisa" />
-                 <div><button type="submit" targat="_blank">Filtrar</button></div>
-            }*@
+
     </div>
     <div class="container body-content">
         @RenderBody()
+
         <hr />
         <footer id="rodape">
             <p>&copy; @DateTime.Now.Year - Suporte Solução Sistemas - Fábio Macieira &reg; </p>

@@ -8,13 +8,15 @@
     @Html.AntiForgeryToken()
 
     <ul class="nav navbar-nav navbar-right">
-      <li class="label label-info">
-    @{
-        var manager = new UserManager<ApplicationUser>(new Microsoft.AspNet.Identity.EntityFramework.UserStore<ApplicationUser>(new ApplicationDbContext()));
-        var currentUser = manager.FindById(User.Identity.GetUserId());
-    }
-        @Html.ActionLink(currentUser.NomeUsuario + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Sair</a></li>
+        <li class="label">
+            @{
+                var manager = new UserManager<ApplicationUser>(new Microsoft.AspNet.Identity.EntityFramework.UserStore<ApplicationUser>(new ApplicationDbContext()));
+                var currentUser = manager.FindById(User.Identity.GetUserId());
+            }
+
+            @Html.ActionLink(currentUser.NomeUsuario + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+          <li><a href="javascript:document.getElementById('logoutForm').submit()">Sair</a></li>
     </ul>
     }
 }

@@ -55,8 +55,10 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <b>
-                        <span class="glyphicon glyphicon-user" aria-hidden="true">
-                           @*Gravar o usuario ao postar*@
+                        <span class="glyphicon glyphicon-user panel-default">
+                            <span class="badge">
+                                @Html.DisplayFor(modelItem => item.UsuarioLogado)
+                            </span>
                          </span>
                         @Html.DisplayFor(modelItem => item.Topico)
                         Publicado em: @Html.DisplayFor(modelItem => item.DataPostagem)

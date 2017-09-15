@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using SuporteSS2015._1.Models;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using SuporteSS2015._1.Models;
 
 namespace SuporteSS2015._1.Controllers
 {
@@ -20,7 +18,7 @@ namespace SuporteSS2015._1.Controllers
             //var nomeTopico = db.Categorias.Find(Id);
             //lista somente o top de 10 Posts
             var postagem = db.Postagem.Include(p => p.Categoria).Take(10);
-            
+
             ViewBag.Categoria = db.Categorias.Count();
             ViewBag.Postagens = db.Postagem.Count();
             ViewBag.Respostas = db.Resposta.Count();
@@ -57,9 +55,16 @@ namespace SuporteSS2015._1.Controllers
         [HttpPost]
         //[ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Create([Bind(Include = "Id,Topico,Mensagem,DataPostagem,CategoriaId, NomeUsuarioView")] Postagem postagem)
+        public ActionResult Create([Bind(Include = "Id,Topico,Mensagem,DataPostagem,CategoriaId,UsuarioLogado")] Postagem postagem)
         {
+            var manager = new UserManager<ApplicationUser>
+                (new Microsoft.AspNet.Identity.EntityFramework.UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var currentUser = manager.FindById(User.Identity.GetUserId());
+
+            
+            postagem.UsuarioLogado = currentUser.NomeUsuario; //User.Identity.Name;
             postagem.DataPostagem = DateTime.Now;
+
             if (ModelState.IsValid)
             {
                 db.Postagem.Add(postagem);

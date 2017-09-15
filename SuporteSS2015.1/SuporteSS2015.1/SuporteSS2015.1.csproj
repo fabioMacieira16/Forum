@@ -322,13 +322,14 @@
     <Content Include="Views\Respostas\Create.cshtml" />
     <Content Include="Views\Respostas\Delete.cshtml" />
     <Content Include="Views\Respostas\Details.cshtml" />
-    <Content Include="Views\Respostas\Edit.cshtml" />
+    <Content Include="Views\Respostas\Edit2.cshtml" />
     <Content Include="Views\Respostas\Index.cshtml" />
     <Content Include="Views\Postagem\Create.cshtml" />
     <Content Include="Views\Manage\Administrativo.cshtml" />
     <Content Include="Views\Manage\Index - Cópia .cshtml" />
     <Content Include="Views\Manage\ListaDeUsuarios.cshtml" />
     <Content Include="Views\Home\Pesquisar.cshtml" />
+    <Content Include="Views\Respostas\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

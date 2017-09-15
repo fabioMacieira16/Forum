@@ -12,5 +12,6 @@ namespace SuporteSS2015._1.Models
         public DateTime DataResposta { get; set; }
         public int PostagemId { get; set; }
         public virtual Postagem Postagem { get; set; }
+        public string UsuarioLogado { get; set; }
     }
 }

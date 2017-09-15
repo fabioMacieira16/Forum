@@ -64,6 +64,7 @@ namespace SuporteSS2015._1.Models
 
     public class RegisterViewModel
     {
+       // public int Id { get; set; }
         [Required]
         [MaxLength(15, ErrorMessage = "O campo Nome do Usário deve ter no máximo '20' caracteres.")]
         [Display(Name = "Nome do Usário")]
@@ -84,7 +85,7 @@ namespace SuporteSS2015._1.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "A senha e confirmação não coincidem.")]
         public string ConfirmPassword { get; set; }
-
+        
         [Display(Name = "Master?")]
         public bool UserMaster { get; set; }
     }

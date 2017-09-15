@@ -1,6 +1,74 @@
-﻿@model IEnumerable<SuporteSS2015._1.ApplicationUserManager>
+﻿@model IEnumerable<SuporteSS2015._1.Areas.Administrativo.Models.Analistas>
 
-@{
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pesquisa</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>Digite o nome</p>
+            <input type="text" name="texto" id="texto" placeholder="Digite a pesquisa" />
+            <div><button type="submit">Filtrar</button></div>
+        }
+    </div>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Nome</td>
+        </tr>
+        @{
+            if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>@item.I</td>*@
+                        <td>@item.NomeAnalista</td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@{
     Layout = null;
 }
 
@@ -44,4 +112,4 @@
     
     </table>
 </body>
-</html>
+</html>*@
