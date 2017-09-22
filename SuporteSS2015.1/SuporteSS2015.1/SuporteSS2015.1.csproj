@@ -168,8 +168,10 @@
     <Compile Include="Areas\Administrativo\Controllers\AnalistasController.cs" />
     <Compile Include="Areas\Administrativo\Controllers\CategoriasController.cs" />
     <Compile Include="Areas\Administrativo\Controllers\EscalasController.cs" />
+    <Compile Include="Controllers\ContatoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PesquisarController.cs" />
     <Compile Include="Controllers\PostagemController.cs" />
     <Compile Include="Controllers\RespostasController.cs" />
     <Compile Include="Areas\Administrativo\Controllers\TipoEscalaController.cs" />
@@ -181,6 +183,7 @@
     <Compile Include="Areas\Administrativo\Models\Analistas.cs" />
     <Compile Include="Areas\Administrativo\Models\Escala.cs" />
     <Compile Include="HtmlHelps\PaginacaoHelps.cs" />
+    <Compile Include="Models\Contato.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Paginacao.cs" />
@@ -228,11 +231,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Areas\Administrativo\Views\web.config" />
-    <Content Include="Areas\Administrativo\Views\Shared\_AdminstativoLayout.cshtml" />
-    <Content Include="Areas\Administrativo\Views\Shared\_ViewStart.cshtml" />
-    <Content Include="Areas\Administrativo\Views\Usuarios\Index.cshtml" />
     <Content Include="Areas\Administrativo\Views\PainelControle\Index.cshtml" />
-    <Content Include="Areas\Administrativo\Views\PainelControle\ListaUsuario.cshtml" />
     <None Include="Properties\PublishProfiles\ForumSS.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\application.js" />
@@ -325,18 +324,17 @@
     <Content Include="Views\Respostas\Edit2.cshtml" />
     <Content Include="Views\Respostas\Index.cshtml" />
     <Content Include="Views\Postagem\Create.cshtml" />
-    <Content Include="Views\Manage\Administrativo.cshtml" />
     <Content Include="Views\Manage\Index - Cópia .cshtml" />
     <Content Include="Views\Manage\ListaDeUsuarios.cshtml" />
-    <Content Include="Views\Home\Pesquisar.cshtml" />
     <Content Include="Views\Respostas\Edit.cshtml" />
+    <Content Include="Views\Pesquisar\Index.cshtml" />
+    <Content Include="Views\Shared\_Buscar.cshtml" />
+    <Content Include="Views\Contato\Contato.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administrativo\Views\Shared\" />
     <Folder Include="Reports\" />
-    <Folder Include="Views\Busca\" />
-    <Folder Include="Views\Consulta\" />
-    <Folder Include="Views\Vitrine\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

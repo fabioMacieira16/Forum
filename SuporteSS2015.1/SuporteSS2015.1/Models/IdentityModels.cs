@@ -38,6 +38,7 @@ namespace SuporteSS2015._1.Models
         public virtual DbSet<Postagem> Postagem { get; set; }
         public virtual DbSet<Resposta> Resposta { get; set; }
         public virtual DbSet<Escala> Escalas { get; set; }
+        public virtual DbSet<Contato> Contato { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

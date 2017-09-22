@@ -17,6 +17,9 @@
 
 </head>
 <body>
+    <form class="navbar-form navbar-right" action="~/Pesquisar/">
+        @Html.Partial("_Buscar")
+    </form>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -33,13 +36,9 @@
                     <li>@Html.ActionLink("Escalas", "Escalas/Details", "Administrativo")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
-                <form class="navbar-form navbar-right">
-                    <input type="text" class="form-control" placeholder="Buscar" />
-                </form>
+                
             </div>
         </div>
-
-
     </div>
     <div class="container body-content">
         @RenderBody()

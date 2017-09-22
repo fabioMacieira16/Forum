@@ -7,7 +7,7 @@
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
-    <h4>Change your account settings</h4>
+    <h4>Altere as configurações da sua conta</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>Password:</dt>
@@ -26,7 +26,7 @@
         <dt>External Logins:</dt>
         <dd>
             @Model.Logins.Count [
-            @Html.ActionLink("Manage", "ManageLogins") ]
+            @*@Html.ActionLink("Manage", "ManageLogins") ]*@
         </dd>
 
         @*@if (Model.TwoFactor)
@@ -48,7 +48,7 @@
                     <input type="submit" value="Enable" class="btn btn-link" />
                     </text>
                 }
-            }*@
-        </dd>
+            }
+        </dd>*@
     </dl>
 </div>

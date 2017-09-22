@@ -19,8 +19,7 @@ namespace SuporteSS2015._1.Areas.Administrativo.Controllers
         }
 
         // GET: Escalas/Details/5
-        public ActionResult Details(
-)
+        public ActionResult Details()
         {
             var escalas = db.Escalas.Include(e => e.Analistas).Include(e => e.TipoEscala);
             return View(escalas.ToList());

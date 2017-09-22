@@ -13,11 +13,20 @@ namespace SuporteSS2015._1
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+   
+
+            routes.MapRoute(
+               "Pesquisar",
+               "{controller}/{action}/{SeachTerm}",
+               new { controller = "Pesquisar", action = "Index", SeachTerm = UrlParameter.Optional }
+          );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+           
         }
     }
 }

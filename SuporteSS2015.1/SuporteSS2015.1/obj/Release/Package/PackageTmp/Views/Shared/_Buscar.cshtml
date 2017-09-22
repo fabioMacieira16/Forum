@@ -1,0 +1,15 @@
+﻿<div class="container text-right">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            @using (@Html.BeginRouteForm("Pesquisar", FormMethod.Get))
+            {
+                <div class="input-group">
+                    @Html.TextBox("SeachTerm", null, new { @class = "form-control", placeholder = "O que esta procurando" })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-danger">Buscar</button>
+                    </span>
+                </div>
+            }
+        </div>
+    </div>
+</div>

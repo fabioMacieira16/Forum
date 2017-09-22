@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SuporteSS2015._1.Models.Postagem>
+@{
+    ViewBag.Title = "Buscar";
+}
+@*@ViewBag.Mensagem()*@
+
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        @foreach (var item in Model)
+            {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <b>
+                        <span class="glyphicon glyphicon-user">
+                            <span class="badge">
+                                @Html.DisplayFor(modelItem => item.UsuarioLogado)
+                                <span class="bab">
+                                    @Html.DisplayFor(itemModel => item.DataPostagem)
+                                </span>
+                            </span>
+                        </span>
+                        @Html.DisplayFor(modelItem => item.Topico)
+                    </b>
+                        @Html.Raw(item.Mensagem)
+                </div>
+                @Html.ActionLink("Consultar", "Index", "Respostas", new { id = item.Id }, new { @class = "btn btn-primery" })
+            </div>
+        }
+    </div>
+</div>
+ 

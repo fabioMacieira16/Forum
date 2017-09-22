@@ -15,15 +15,13 @@ namespace SuporteSS2015._1.Controllers
         // GET: Postagem
         public ActionResult Index()
         {
-            //var nomeTopico = db.Categorias.Find(Id);
             //lista somente o top de 10 Posts
-            var postagem = db.Postagem.Include(p => p.Categoria).Take(10);
+            var postagem = db.Postagem.Include(p => p.Categoria);
 
             ViewBag.Categoria = db.Categorias.Count();
             ViewBag.Postagens = db.Postagem.Count();
             ViewBag.Respostas = db.Resposta.Count();
-
-            //ViewBag.nomeTopico = nomeTopico.Categoria;
+          
             return View(postagem.ToList());
         }
 
@@ -60,7 +58,6 @@ namespace SuporteSS2015._1.Controllers
             var manager = new UserManager<ApplicationUser>
                 (new Microsoft.AspNet.Identity.EntityFramework.UserStore<ApplicationUser>(new ApplicationDbContext()));
             var currentUser = manager.FindById(User.Identity.GetUserId());
-
             
             postagem.UsuarioLogado = currentUser.NomeUsuario; //User.Identity.Name;
             postagem.DataPostagem = DateTime.Now;

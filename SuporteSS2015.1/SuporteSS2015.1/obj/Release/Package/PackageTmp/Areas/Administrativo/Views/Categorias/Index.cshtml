@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SuporteSS2015._1.Areas.Administrativo.Models.Categorias>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cadastro de tópicos</h2>
+<div class="form-group">
+    @Html.ActionLink("Cadastrar", "Create", null, null, new { @class = "btn btn-primary" })
+</div>
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @Html.DisplayFor(modelItem => item.Categoria) </td>
+            <td>
+                <span class="badge">@item.Postagem.Count</span>
+                @Html.ActionLink("Visualizar Fórum", "Index", "Postagem", new { id = item.Id }, new { @class = "btn btn-info"})|
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id },  new { @class = "btn btn-warning"})|
+                @Html.ActionLink("Deletar", "Delete", new { id = item.Id }, new { @class= "btn btn-danger"})
+            </td>
+        </tr>
+    }
+</table>

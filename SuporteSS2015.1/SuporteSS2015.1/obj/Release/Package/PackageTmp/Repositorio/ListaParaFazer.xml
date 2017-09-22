@@ -1,78 +1,54 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <implemente>
-    <suporte>
-  1 - $ok Entra com o usario para criar o banco de dados 
-  2 -  $ok Só acessa as paginas se o usarios estiver logado
-  3 - $ok Criar as tabelas no banco de dados
-    3.1 - $ok Tabelas postagem e topicos
-    3.2 -$ok as tabelas login e usarios já vam ser pegues do banco de dados que a aplicação vai criar
-  4 - $ok Criar a Escala
-  5 - $ok parecer o nome do usario logado
-  6 - $ok mostra o botao sair 
-      $ok o Forum nao esta gravando
-      $ok a agenda nao esta gravando os dados
-      $ok faze o cadastro de analista aparecer (quanto for cadastra uma nova agenda)
-       
-  </suporte>
---------------------------------------------------------------------------------------------------------
-    <FORUM>
-       $ok Tabelas postagem e topicos
-        $ok Cadatrado de topicos
-         $ok   saber por que nao ta gravando - verificado que o IdentyModel esta habilitado para apagar o banco ao mudar as tables
-           $ok saber por que nao esta retornado os dados que estao gravado no banco
-            
-      $ok 1 Cadatrado de postagem
-         $ok nao esta gravando
-         $ok nao esta mudando a consulta
-            
-            2  mudar a estrutura do Forum(Modelo Padrão post)
-             $ok 1 topico
-             $ok 2 Mensagem do usuario
-             $ok 1 Categoria
-            
-            3 Tala inicial do forum
-              1 destaques dos forum(os 10 ultimos post) 
-                logo abaixo
-                $ok 2 ultimos 10 posts -(usando o tack(10)
-                 3  lista a quantidade de paginas para usuário
-                4 fazer um filtro de busca
-                5 todo post vai ter um link para abrir na sua aba
-                6 da mesma forma vai ser no buscar
-                7 responder a pergunta na mesma pagina
-                
-             4 Usuario
-             informa o usuario que fez o post
-             Criar a pagina administrativa
-             
-             
-             
-              </FORUM>
-------------------------------------------------------------------------------------------------
-    <Agenda>
-            1$ok Cadastro de Analista (novo/editar/excluir)
-                $ok nome do analista
-                $ok telefone
-            2$ok cadatro de agandar os horarios (novo/editar/excluir)
-              $ok escala da semana
-              $ok   informa a seguência dos 3 da escala
-               $ok  informa o analista
-               $ok  infora a data trabalha
-              $ok   informa o horario
-              $ok   informa o telefone do analista
-            Regras
-              1 todos do site podem ver a agenda(mais só os administrados podem organizar as agendas)
-             $ok 2 Mostra as datas trabalhadas 
-             
-             Outros
-                1 Armazenar as datas por Ex(Janeiro, Fevereiro)
-                2 Criar um Filtro
-            </Agenda>
---------------------------------------------------------------------------------------------------------
+  --------------------------------------------------------------------------------------------------------
+  <FORUM>
+    (Prioridade 1)
+    Menu
+    corrigir as rotas nos menus
+    listar todos as usarios logado fazendo um
+    Fazer a tela de mais informaçoes
+    corrigir o editar e exclur da resposta
+
+    -area administrativa
+    LINKAR NO PAINEL DE CONTROLE ESTA DANDO ERRO
+    ao clicar no nome do usuario ir para o painel de controle  para fazer alteraçoes (foto e senha)
+    se ele for adim - entra na pagina completa
+    caso nao entrar so com o perfi de usuario simples
+    ---------------------------------------------------------
+    (Prioridade 2)
+
+    Destaques dos forum(os 10 ultimos post)
+    lista a quantidade de paginas por usuário
+    ------------------------------------------------------
+    (Prioridade 3)
+
+    criar a opcao para resgata a senha
+    verificar se duas pessoas não postarao com o mesmo nik name
+    ----------------------------------------------------
+    (Prioridade 4)
+    corrigir no menu a opcao escala, esta lista para o Detalhes mais se o usuario apagar a url(Detalhes)ele vai
+    para a opcao edit, deixa assim para outras pessoas editarem
+    corrigir isso nas rotas ou usuario administador
+    ----------------------------------------------------
+    (Prioridade 4)
+
+    quando o usario fazer a postagem encaminha para o Email
+    quando o Usuario manda sugestao enviar para o Emais do suporte e adminstrativo.
+  </FORUM>
+  ------------------------------------------------------------------------------------------------
+  <Agenda>
+    Regras
+    1 todos do site podem ver a agenda(mais só os administrados podem organizar as agendas)
+    Outros
+    1 Armazenar as datas por Ex(Janeiro, Fevereiro)
+    2 Criar um Filtro
+  </Agenda>
+  --------------------------------------------------------------------------------------------------------
   <Informações>
     criar o local para que o usuario possa mandar sugestões e melhorias para o forum em sí
-      Nome da pessoa
-      assunto
-      contato
-      Esse mail direcionar para   
+    Nome da pessoa
+    assunto
+    contato
+    Esse mail direcionar para
   </Informações>
 </implemente>

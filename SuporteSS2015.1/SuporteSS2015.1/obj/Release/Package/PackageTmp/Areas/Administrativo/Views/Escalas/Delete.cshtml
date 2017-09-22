@@ -1,0 +1,46 @@
+﻿@model SuporteSS2015._1.Areas.Administrativo.Models.Escala
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Deletar</h2>
+<h3>Tem certeza de que deseja excluir essa escala   ?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Analistas.NomeAnalista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Analistas.NomeAnalista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEscala.TipoEscalas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEscala.TipoEscalas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDoPlantao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDoPlantao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SuporteSS2015._1.Areas.Administrativo.Models.Analistas>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Novo", "Create", null , new { @Class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeAnalista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoneAnalista)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeAnalista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoneAnalista)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.Id }, new {@class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

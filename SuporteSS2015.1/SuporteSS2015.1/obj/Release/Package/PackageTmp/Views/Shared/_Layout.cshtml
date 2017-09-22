@@ -11,21 +11,19 @@
     <link href="~/Content/css.css" rel="stylesheet" />
     <link href="~/Content/style-responsive.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
-
-
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
     @RenderSection("css", required: false)
 
-
-
-
 </head>
 <body>
+    <form class="navbar-form navbar-right" action="~/Pesquisar/">
+        @Html.Partial("_Buscar")
+    </form>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
@@ -35,22 +33,21 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Fórum", "Forum", "Home")</li>
                     <li>@Html.ActionLink("Download", "Download", "Home")
-                    <li>@Html.ActionLink("Versões", "Versoes", "Home")</li>
-                    <li>@Html.ActionLink("Escalas", "Agenda", "Home")</li>
-                    <li>@Html.ActionLink("Categorias", "Index", "Categorias")</li>
+                    <li>@Html.ActionLink("Escalas", "Escalas/Details", "Administrativo")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
+                
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
+
         <hr />
         <footer id="rodape">
-            <p>&copy; @DateTime.Now.Year - Suporte Solução Sistemas</p>
+            <p>&copy; @DateTime.Now.Year - Suporte Solução Sistemas - Fábio Macieira &reg; </p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">

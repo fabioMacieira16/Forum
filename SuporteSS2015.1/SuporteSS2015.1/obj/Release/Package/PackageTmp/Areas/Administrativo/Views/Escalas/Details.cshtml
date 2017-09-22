@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SuporteSS2015._1.Areas.Administrativo.Models.Escala>
+
+@{
+    ViewBag.Title = "Escalas do mes ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Analistas de Plantão</h2>
+<div>
+    <hr />
+    <table class="table table-striped">
+        <tr>
+            <th class="success">
+                @Html.DisplayNameFor(model => model.DataDoPlantao)
+            </th>
+            <th class="success">
+                @Html.DisplayNameFor(model => model.Analistas.NomeAnalista)
+            </th>
+            <th class="success">
+                @Html.DisplayNameFor(model => model.Analistas.FoneAnalista)
+            </th>
+            <th class="danger">
+                @Html.DisplayNameFor(model => model.TipoEscala.TipoEscalas)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataDoPlantao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Analistas.NomeAnalista)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Analistas.FoneAnalista)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoEscala.TipoEscalas)
+                </td>
+                
+            </tr>
+        }
+
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Voltar", "Index" , null, new { @class = "btn btn-default"})
+</p>

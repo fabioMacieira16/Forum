@@ -3,39 +3,37 @@
   --------------------------------------------------------------------------------------------------------
   <FORUM>
     (Prioridade 1)
-    -Criado o area administrativa
-    Ao gravar a postagem gravar o usario que esta logado.
-    fazer um filtro de busca
+    Menu
+    corrigir as rotas nos menus
+    listar todos as usarios logado fazendo um
+    Fazer a tela de mais informaçoes
+    corrigir o editar e exclur da resposta
 
-    LINKAR NO PAINEL DE CONTROLE
-    ESTA DANDO ERRO
-    -ao clicar no nome do usuario ir para o painel de controle
-    -se ele for adim - entra na pagina completa
+    -area administrativa
+    LINKAR NO PAINEL DE CONTROLE ESTA DANDO ERRO
+    ao clicar no nome do usuario ir para o painel de controle  para fazer alteraçoes (foto e senha)
+    se ele for adim - entra na pagina completa
     caso nao entrar so com o perfi de usuario simples
-
+    ---------------------------------------------------------
     (Prioridade 2)
-    1 Destaques dos forum(os 10 ultimos post)
-    3 lista a quantidade de paginas por usuário
 
-    5 todo post vai ter um link para abrir na sua aba
-    6 da mesma forma vai ser no buscar
-    7 responder a pergunta na mesma pagina
-    4 Usuario
+    Destaques dos forum(os 10 ultimos post)
+    lista a quantidade de paginas por usuário
+    ------------------------------------------------------
+    (Prioridade 3)
+
     criar a opcao para resgata a senha
-
     verificar se duas pessoas não postarao com o mesmo nik name
-    informa quem fez o post
-    criar a pagina do usuario para fazer alteraçoes (foto e senha)
-
     ----------------------------------------------------
-    Lista para Correcao
-    - a Opcao Visualir no Fóru
-    Criar a area de perfil para o usuario
+    (Prioridade 4)
     corrigir no menu a opcao escala, esta lista para o Detalhes mais se o usuario apagar a url(Detalhes)ele vai
-    para a opcao edite, deixa assim para outras pessoas editarem
-    corrigir esso nas rotas
+    para a opcao edit, deixa assim para outras pessoas editarem
+    corrigir isso nas rotas ou usuario administador
     ----------------------------------------------------
+    (Prioridade 4)
 
+    quando o usario fazer a postagem encaminha para o Email
+    quando o Usuario manda sugestao enviar para o Emais do suporte e adminstrativo.
   </FORUM>
   ------------------------------------------------------------------------------------------------
   <Agenda>
