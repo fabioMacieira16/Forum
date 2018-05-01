@@ -128,10 +128,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/13/2012 12:19:34</publishTime>
     </File>
     <File Include="bin/SuporteSS2015.1.dll">
-      <publishTime>09/19/2017 22:57:49</publishTime>
+      <publishTime>09/25/2017 21:55:57</publishTime>
     </File>
     <File Include="bin/SuporteSS2015.1.pdb">
-      <publishTime>09/19/2017 22:57:49</publishTime>
+      <publishTime>09/25/2017 21:55:57</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>08/20/2017 18:16:31</publishTime>
@@ -269,7 +269,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2017 22:18:56</publishTime>
     </File>
     <File Include="Repositorio/Comandos Git.xml">
-      <publishTime>09/03/2017 23:26:47</publishTime>
+      <publishTime>09/21/2017 21:57:47</publishTime>
     </File>
     <File Include="Repositorio/ListaParaFazer.xml">
       <publishTime>09/19/2017 22:14:10</publishTime>
@@ -515,7 +515,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/17/2017 20:45:34</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/17/2017 21:17:47</publishTime>
+      <publishTime>09/21/2017 22:21:23</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>09/19/2017 22:33:30</publishTime>

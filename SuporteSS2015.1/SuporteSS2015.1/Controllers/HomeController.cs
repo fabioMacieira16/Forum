@@ -22,7 +22,6 @@ namespace SuporteSS2015._1.Controllers
             return View();
         }
         [Authorize]
-
         public ActionResult Forum()
         {
             return Redirect("/Postagem/Index");

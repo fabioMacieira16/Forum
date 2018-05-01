@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using PagedList;
 
 namespace SuporteSS2015._1.Controllers
 {
@@ -13,16 +14,21 @@ namespace SuporteSS2015._1.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Postagem
-        public ActionResult Index()
+        public ActionResult Index(int? pagina)
         {
             //lista somente o top de 10 Posts
             var postagem = db.Postagem.Include(p => p.Categoria);
-
             ViewBag.Categoria = db.Categorias.Count();
             ViewBag.Postagens = db.Postagem.Count();
             ViewBag.Respostas = db.Resposta.Count();
-          
-            return View(postagem.ToList());
+
+            //Paginação
+            int tamanhoPagina = 5;
+            int numeroPagina = pagina ?? 1;
+           // var listaPagina = postagem.ToPagedList(pagina, 10);
+
+            //Ordena pela ultima postagem do Usuário
+            return View(postagem.OrderByDescending(x => x.DataPostagem).ToPagedList(numeroPagina, tamanhoPagina));
         }
 
         // GET: Postagem/Details/5

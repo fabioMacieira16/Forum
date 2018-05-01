@@ -1,4 +1,4 @@
-﻿<Commandos>
+﻿ <Commandos>
 git add .  // Adciona todos os arquivos
 git status // verifica se os arquivos estao adicionado
 git commit - m //commita os arquivos para saubir para o repositorio

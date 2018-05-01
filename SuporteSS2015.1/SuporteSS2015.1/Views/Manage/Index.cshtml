@@ -1,6 +1,6 @@
 ﻿@model SuporteSS2015._1.Models.IndexViewModel
 @{
-    ViewBag.Title = "Pefil";
+    ViewBag.Title = "Conta.";
 }
 
 <h2>@ViewBag.Title.</h2>
@@ -15,7 +15,7 @@
             [
             @if (Model.HasPassword)
             {
-                @Html.ActionLink("Change your password", "ChangePassword")
+                @Html.ActionLink("Troque sua senha.", "ChangePassword")
             }
             else
             {
@@ -23,11 +23,11 @@
             }
             ]
         </dd>
-        <dt>External Logins:</dt>
+        @*<dt>External Logins:</dt>
         <dd>
             @Model.Logins.Count [
-            @*@Html.ActionLink("Manage", "ManageLogins") ]*@
-        </dd>
+            @Html.ActionLink("Manage", "ManageLogins") ]
+        </dd>*@
 
         @*@if (Model.TwoFactor)
             {

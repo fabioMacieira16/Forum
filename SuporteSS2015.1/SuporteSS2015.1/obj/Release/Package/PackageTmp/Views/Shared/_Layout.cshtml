@@ -31,9 +31,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Fórum", "Forum", "Home")</li>
-                    <li>@Html.ActionLink("Download", "Download", "Home")
-                    <li>@Html.ActionLink("Escalas", "Escalas/Details", "Administrativo")</li>
+                    <li>@Html.ActionLink("Fórum", "Forum", "Home", new { area = "" },null)</li>
+                    <li>@Html.ActionLink("Download", "Download", "Home", new { area = "" },null)
+                    <li>@Html.ActionLink("Escalas", "Details", "Escalas", new { area= "Administrativo" },null)</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
                 

@@ -549,3 +549,7 @@ C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteS
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.dll
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.pdb
 C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\obj\Debug\SuporteSS2015.1.csprojResolveAssemblyReference.cache
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\PagedList.dll
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\PagedList.Mvc.dll
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\PagedList.xml
+C:\Users\Fabio Macieira\Documents\Visual Studio 2017\Projetos\Forum2017\SuporteSS2015.1\SuporteSS2015.1\bin\PagedList.Mvc.xml

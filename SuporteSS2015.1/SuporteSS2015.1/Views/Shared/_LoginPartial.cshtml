@@ -16,7 +16,10 @@
 
             @Html.ActionLink(currentUser.NomeUsuario + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
-          <li><a href="javascript:document.getElementById('logoutForm').submit()">Sair</a></li>
+          <li>@*<a href="javascript:document.getElementById('logoutForm').submit()">Sair</a>*@
+        @Html.ActionLink( "Sair", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "LogOff" })
+        
+        </li>
     </ul>
     }
 }
