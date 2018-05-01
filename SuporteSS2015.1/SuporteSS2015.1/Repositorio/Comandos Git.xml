@@ -1,8 +1,0 @@
-﻿ <Commandos>
-git status // verifica se os arquivos estao adicionado
-git add .  // Adciona todos os arquivos 
-git commit - m //commita os arquivos para subir para o repositorio
-git push origin master // para subir o projeto para o repositorio
-
-git pull origin master //baixa todas a versao do repositorio atualizada
-</Commandos>
