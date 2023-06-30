@@ -9,7 +9,7 @@
     </WebStackScaffolding_LayoutPageFile>
     <ProjectView>ProjectFiles</ProjectView>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>ForumSS</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\55859\Documents\GitHub\Forum2017\SuporteSS2015.1\SuporteSS2015.1\Properties\PublishProfiles\ForumSS.pubxml</NameOfLastUsedPublishProfile>
     <WebStackScaffolding_ControllerDialogWidth>600</WebStackScaffolding_ControllerDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>SuporteSS2015._1.Models.ApplicationDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <WebStackScaffolding_AreaDialogWidth>600</WebStackScaffolding_AreaDialogWidth>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

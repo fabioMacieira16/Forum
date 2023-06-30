@@ -1,46 +1,49 @@
-﻿@model IEnumerable<SuporteSS2015._1.Models.Postagem>
-    @using Microsoft.AspNet.Identity
- 
+﻿@model PagedList.IPagedList<SuporteSS2015._1.Models.Postagem>
+@using Microsoft.AspNet.Identity
+@using PagedList.Mvc
+
+
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}*<div class="row-fluid">
+}
+@*<div class="row-fluid">
 
-        <div class="span3 statbox purple" ontablet="span6" ondesktop="span3">
-            <div class="boxchart"><canvas width="64" height="60" style="display: inline-block; width: 64px; height: 60px; vertical-align: top;"></canvas></div>
-            <div class="number">@ViewBag.Categoria<i class="icon-arrow-up"></i></div>
-            <div class="title">Categorias</div>
-            <div class="footer">
-                <a href="~/Postagem">Lista de Categorias</a>
+    <div class="span3 statbox purple" ontablet="span6" ondesktop="span3">
+        <div class="boxchart"><canvas width="64" height="60" style="display: inline-block; width: 64px; height: 60px; vertical-align: top;"></canvas></div>
+        <div class="number">@ViewBag.Categoria<i class="icon-arrow-up"></i></div>
+        <div class="title">Categorias</div>
+        <div class="footer">
+            <a href="~/Postagem">Lista de Categorias</a>
 
-            </div>
-        </div>
-        <div class="span3 statbox green" ontablet="span6" ondesktop="span3">
-            <div class="boxchart"><canvas width="64" height="60" style="display: inline-block; width: 64px; height: 60px; vertical-align: top;"></canvas></div>
-            <div class="number">@ViewBag.Postagens<i class="icon-arrow-up"></i></div>
-            <div class="title">Tópicos</div>
-            <div class="footer">
-                <a href="~/Categorias">Lista de Tópicos</a>
-            </div>
-        </div>
-        <div class="span3 statbox blue noMargin" ontablet="span6" ondesktop="span3">
-            <div class="boxchart"><canvas width="64" height="60" style="display: inline-block; width: 64px; height: 60px; vertical-align: top;"></canvas></div>
-            <div class="number">@ViewBag.Respostas<i class="icon-arrow-up"></i></div>
-            <div class="title">Respostas</div>
-            <div class="footer">
-                <a href="#"> Lista de Respostas</a>
-            </div>
-        </div>
-        <div class="span3 statbox yellow" ontablet="span6" ondesktop="span3">
-            <div class="boxchart"><canvas width="69" height="60" style="display: inline-block; width: 69px; height: 60px; vertical-align: top;"></canvas></div>
-            <div class="number">@ViewBag.Postagens<i class="icon-arrow-down"></i></div>
-            <div class="title">Sped</div>
-            <div class="footer">
-                <a href="#">Lista de Duvidas de Sped</a>
-            </div>
         </div>
     </div>
+    <div class="span3 statbox green" ontablet="span6" ondesktop="span3">
+        <div class="boxchart"><canvas width="64" height="60" style="display: inline-block; width: 64px; height: 60px; vertical-align: top;"></canvas></div>
+        <div class="number">@ViewBag.Postagens<i class="icon-arrow-up"></i></div>
+        <div class="title">Tópicos</div>
+        <div class="footer">
+            <a href="~/Categorias">Lista de Tópicos</a>
+        </div>
+    </div>
+    <div class="span3 statbox blue noMargin" ontablet="span6" ondesktop="span3">
+        <div class="boxchart"><canvas width="64" height="60" style="display: inline-block; width: 64px; height: 60px; vertical-align: top;"></canvas></div>
+        <div class="number">@ViewBag.Respostas<i class="icon-arrow-up"></i></div>
+        <div class="title">Respostas</div>
+        <div class="footer">
+            <a href="#"> Lista de Respostas</a>
+        </div>
+    </div>
+    <div class="span3 statbox yellow" ontablet="span6" ondesktop="span3">
+        <div class="boxchart"><canvas width="69" height="60" style="display: inline-block; width: 69px; height: 60px; vertical-align: top;"></canvas></div>
+        <div class="number">@ViewBag.Postagens<i class="icon-arrow-down"></i></div>
+        <div class="title">Sped</div>
+        <div class="footer">
+            <a href="#">Lista de Duvidas de Sped</a>
+        </div>
+    </div>
+</div>*@
 
 <br />
 <div class="form-group">
@@ -48,7 +51,7 @@
 </div>
 
 <div class="panel panel-default">
-    <div class="panel-heading"><h3><b>Publicações para o tópico: @ViewBag.nomeTopico<span class="badge">@Model.Count()</span></b></h3></div>
+    <div class="panel-heading"><h3><b>Publicações: @ViewBag.nomeTopico<span class="badge">@Model.Count()</span></b></h3></div>
     <div class="panel-body">
         @foreach (var item in Model)
         {
@@ -59,20 +62,26 @@
                             <span class="badge">
                                 @Html.DisplayFor(modelItem => item.UsuarioLogado)
                             </span>
-                         </span>
+                        </span>
                         @Html.DisplayFor(modelItem => item.Topico)
-                        Publicado em: @Html.DisplayFor(modelItem => item.DataPostagem)
                     </b>
                 </div>
                 <div class="panel-body">
-                    <span class="glyphicon glyphicon-hand-right" aria-busy ="true"></span>
+                    <span class="glyphicon glyphicon-hand-right" aria-busy="true"></span>
                     @Html.Raw(item.Mensagem)
-                    <strong> Categoria - @Html.DisplayFor(modelItem => item.Categoria.Categoria) </strong><br />  
-                    @Html.ActionLink("Responder", "Create", "Respostas", new {id = item.Id},new { @class= "btn btn-info" }) |
-                    @Html.ActionLink("Listar", "Index", "Respostas", new { id = item.Id}, new { @class = "btn btn-default" })
-                     <span class="badge">@item.Resposta.Count</span>
+                    <strong>
+                        Categoria - @Html.DisplayFor(modelItem => item.Categoria.Categoria) |
+                        Publicado em: @Html.DisplayFor(modelItem => item.DataPostagem)
+                    </strong><br />
+                    @Html.ActionLink("Responder", "Create", "Respostas", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Listar", "Index", "Respostas", new { id = item.Id }, new { @class = "btn btn-default" })
+                    <span class="badge">@item.Resposta.Count</span>
                 </div>
             </div>
         }
     </div>
 </div>
+
+<br />
+Página @Model.PageNumber de @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { pagina = page}))

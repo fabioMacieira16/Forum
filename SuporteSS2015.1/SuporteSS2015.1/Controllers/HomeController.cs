@@ -10,18 +10,18 @@ namespace SuporteSS2015._1.Controllers
         {
             return View();
         }
-        [Authorize]
+        //[Authorize]
         public ActionResult Download()
         {
             ViewBag.Message = "Baixe programas e drives de impressoras.";
             return View();
         }
-        [Authorize]
+        //[Authorize]
         public ActionResult Versoes()
         {
             return View();
         }
-        [Authorize]
+        //[Authorize]
         public ActionResult Forum()
         {
             return Redirect("/Postagem/Index");

@@ -8,10 +8,7 @@
 <div class="panel panel-default">
     <h1 class="align-center">
         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-
-        @*@ViewBag.Topico*@
         <span class="">
-            @*Onde vai ficar a pegunta*@
             @ViewBag.PostTopico
         </span>
     </h1>
@@ -24,17 +21,13 @@
                         <span class="badge">
                             @Html.DisplayFor(itemModel => item.UsuarioLogado)
                         </span>
-                        @Html.DisplayFor(modelItem => item.Postagem.Mensagem)
+                        @Html.Raw(item.Postagem.Mensagem)
                         Publicado em: @Html.DisplayFor(modelItem => item.DataResposta)
                     </b>
                 </div>
                 <label>@Html.Raw(item.Respostas)</label>
                 <br />
-
-                @*@Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-info" }) |
-                    @Html.ActionLink("Deletar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })*@
                 <div class="panel-body">
-                    @*<span class="badge">Postagem.Resposta.Count</span>*@
                     @Html.ActionLink("Respostas", "Create", "Respostas", new { id = item.Postagem.Id }, null)
                 </div>
             </div>

@@ -7,7 +7,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
-    <_PublishTargetUrl>C:\Users\Fabio Macieira\Documents\Git</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\Forum</_PublishTargetUrl>
+    <History>False|2023-06-27T22:35:05.7470637Z;False|2023-06-27T19:30:53.4970908-03:00;False|2023-06-27T19:19:19.6167073-03:00;False|2023-06-27T19:16:05.2862239-03:00;False|2023-06-27T19:15:45.8326071-03:00;False|2023-06-27T19:14:42.7253252-03:00;</History>
+    <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/Administrativo/Views/Analistas/Create.cshtml">

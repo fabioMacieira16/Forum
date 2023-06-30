@@ -4,24 +4,23 @@
   <FORUM>
     (Prioridade 1)
     Menu
-    corrigir as rotas nos menus
-    listar todos as usarios logado fazendo um
-    Fazer a tela de mais informaçoes
-    corrigir o editar e exclur da resposta
-
+    listar todos as usarios
+    listar todos as usarios logado
+    corrigir o editar e excluir da resposta
     -area administrativa
-    LINKAR NO PAINEL DE CONTROLE ESTA DANDO ERRO
     ao clicar no nome do usuario ir para o painel de controle  para fazer alteraçoes (foto e senha)
     se ele for adim - entra na pagina completa
     caso nao entrar so com o perfi de usuario simples
+    Lista todas as postagem
     ---------------------------------------------------------
     (Prioridade 2)
-
+    deixa as postagems em Maiusculas
     Destaques dos forum(os 10 ultimos post)
     lista a quantidade de paginas por usuário
+    perfil do usuario
+    quando o usuario estiver vendo uma postagem e ao responder voltar para qual ele estiver vendo e nao para o início
     ------------------------------------------------------
     (Prioridade 3)
-
     criar a opcao para resgata a senha
     verificar se duas pessoas não postarao com o mesmo nik name
     ----------------------------------------------------
@@ -31,9 +30,10 @@
     corrigir isso nas rotas ou usuario administador
     ----------------------------------------------------
     (Prioridade 4)
-
+    Corrigir o deslogar
     quando o usario fazer a postagem encaminha para o Email
     quando o Usuario manda sugestao enviar para o Emais do suporte e adminstrativo.
+    Fazer a tela de mais informaçoes
   </FORUM>
   ------------------------------------------------------------------------------------------------
   <Agenda>
